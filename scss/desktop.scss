@@ -1,0 +1,41 @@
+@import 'base/fonts_n_colors';
+
+ul#nav-menu {
+
+	li:hover {
+
+		div.horizontal-line {
+			width: 40px;
+		}
+
+		a, a:link, a:visited {
+
+			opacity: 1;
+
+		}
+
+
+	}
+
+}
+
+ul.header-menu {
+	li:hover {
+		cursor: pointer;
+	}
+}
+
+a, a:link, a:visited {
+
+	&.button:hover {
+		transition: 0.5s;
+		background: #fff;
+		color: $dark-green;
+
+		&.dark {
+			transition: 0.5s;
+			background: $dark-green;
+			color: #fff;			
+		}
+	}
+}

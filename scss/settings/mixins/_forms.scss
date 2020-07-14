@@ -1,0 +1,37 @@
+//============================================================================//
+//    MIXIN CHECKBOX AND RADIOS VARIANTS
+//============================================================================//
+
+@mixin form-checkbox-radio-color($color) {
+
+    .c-indicator {
+        border: 1px solid $color;
+    }
+
+    &:hover {
+
+        .c-indicator {
+            border: 2px solid $color;
+        }
+
+        input:disabled:checked ~ .c-indicator {
+            background-color: rgba($color, 0.5);
+        }
+
+        input:disabled ~ .c-indicator {
+            border: 1px solid $color;
+        }
+    }
+
+    input:disabled:checked ~ .c-indicator {
+        background-color: rgba($color, 0.5);
+    }
+
+    input:checked ~ .c-indicator {
+        background-color: $color;
+    }
+
+    input:active ~ .c-indicator {
+        background-color: rgba($color, 0.5);
+    }
+}

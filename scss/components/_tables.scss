@@ -1,0 +1,195 @@
+//
+// Table of contents
+//
+// GLOBAL TABLE...................table styles.
+//
+// TABLE OPTIONS..................bordered, striped, inverse, default, responsive, reflow.
+//
+// TABLE COLOR VARIANTS...........contextual color variants.
+//
+
+
+
+
+
+//============================================================================//
+//    GLOBAL TABLE
+//============================================================================//
+
+.table {
+
+    th, td {
+        border-top: 1px solid $color-grey;
+    }
+
+    thead {
+        font-family: $font-family-base;
+
+        th {
+            border-bottom: 2px solid $color-grey;
+            font-family: $font-family-base;
+            font-weight: 600;
+        }
+    }
+}
+
+.table tbody + tbody {
+    border-top: 2px solid $color-grey;
+}
+
+
+
+
+
+//============================================================================//
+//    TABLE OPTIONS
+//============================================================================//
+
+//table bordered
+.table-bordered {
+    border: 1px solid $color-grey;
+
+    th, td {
+        border: 1px solid $color-grey;
+    }
+}
+
+
+//table striped
+.table-striped {
+
+    tbody {
+
+        tr:nth-of-type(odd) {
+            background-color: rgba($color-grey, 0.5);
+        }
+    }
+}
+
+
+//table inverse
+.thead-inverse {
+    th {
+        color: $color-white;
+        background-color: $color-inverse;
+    }
+}
+
+.table-inverse {
+    color: $color-white !important;
+    background-color: $color-inverse !important;
+}
+
+.table-inverse th,
+.table-inverse td,
+.table-inverse thead th {
+    border-color: rgba($color-grey, 0.2);
+}
+
+
+//table default
+.thead-default {
+
+    th {
+        color: #55595c;
+        background-color: rgba($color-grey, 0.5);
+    }
+}
+
+
+//table responsive
+.table-responsive {
+
+}
+
+
+//table reflow
+.table-reflow {
+
+    th, td {
+        border-top: 1px solid $color-grey;
+        border-left: 1px solid $color-grey;
+
+        &:last-child {
+            border-right: 1px solid $color-grey;
+        }
+    }
+
+    thead, tbody, tfoot {
+
+        &:last-child {
+
+            tr {
+
+                &:last-child {
+
+                    th, td {
+                        border-bottom: 1px solid $color-grey;
+                    }
+                }
+            }
+        }
+    }
+
+    tr {
+
+        th, td {
+            border: 1px solid $color-grey;
+        }
+    }
+}
+
+
+
+
+
+//============================================================================//
+//    TABLE COLOR VARIANTS
+//============================================================================//
+
+@each $table-name, $color-var  in
+
+    // Basic color
+    (active, $color-grey),
+    (inverse, $color-inverse),
+    (primary, $color-primary),
+    (secondary, $color-secondary),
+    (third, $color-third),
+    (fourth, $color-fourth),
+    (fifth, $color-fifth),
+    (success, $color-success),
+    (info, $color-info),
+    (warning, $color-warning),
+    (danger, $color-danger) {
+
+    .table-#{$table-name} {
+        background-color: rgba($color-var, 0.4);
+
+        > th, >td{
+            background-color: rgba($color-var, 0.4);
+        }
+    }
+
+    .table-hover {
+        tbody {
+
+            tr {
+
+                &:hover {
+                    background-color: rgba($color-grey, 0.5);
+                }
+            }
+        }
+
+        .table-#{$table-name} {
+
+            &:hover {
+                background-color: rgba($color-var, 0.6);
+
+                > td, >th{
+                    background-color: rgba($color-var, 0.6);
+                }
+            }
+        }
+    }
+}

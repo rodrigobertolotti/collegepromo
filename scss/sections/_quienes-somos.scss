@@ -1,0 +1,185 @@
+@import "../base/_fonts_n_colors";
+
+
+//============================================================================//
+//    QUIENES SOMOS
+//============================================================================//
+
+
+#quienes-somos {
+	@include display-flex;
+    @include flex-flow(column, nowrap);
+    @include justify-content(center);
+    @include align-items(center);
+	background: #231f20;
+	min-height: 250px;
+
+	.wrap-logo-footer {
+		width: 100%;
+		max-width: 500px;
+
+		img {
+			width: 100%;
+			display: block;
+			margin: 40px auto;
+		}
+	}
+
+
+    ul.footer-redes {
+
+        margin: 30px 0px;
+        padding: 0px;
+        width: 100%;
+        text-align: left;
+        @include display-flex;
+        @include flex-flow(row, nowrap);
+        @include justify-content(center);
+        @include align-items(center);
+
+        li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 5px 5px;
+            font-family: $bold-font;
+            font-weight: 900;
+            font-size: 25px;
+            letter-spacing: 25px;
+
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            div.horizontal-line {
+                min-width: 15px;
+                background: white;
+            }
+
+            &:first-child {
+                margin-left: 25px;
+            }
+
+            .facebook {
+                color: #ff2c92 !important;
+                i {
+                    color: #ff2c92 !important;
+                }
+            }
+            .instagram {
+                color: #bc5fff !important;
+                i {
+                    color: #bc5fff !important;
+                }
+            }
+            .tiktok {
+                color: #48ffff !important;
+                i {
+                    color: #48ffff !important;
+                }
+            }
+            .whatsapp {
+                color: #00e676 !important;
+                i {
+                    color: #00e676 !important;
+                }
+            }
+        }
+    }
+
+
+
+    .wrap-quienes-somos {
+         margin-top: 50px;
+
+
+    	h2.titulo-texto {
+    		font-family: $font-family-third;
+            color: #ff2c92;
+            font-weight: 600;
+            font-size: 55px;
+            text-align: center;
+            margin: 0 0 40px 0;
+            padding: 0;
+            width: 100%;
+        }
+
+    	.container {
+
+    		.row {
+
+    			.wrap-card-quienes-somos {
+    				width: 100%;
+    				margin: 0;
+                	padding: 0;
+                	.quienes {
+                		width: 100%;
+                		img {
+                			width: 100%;
+                            height: auto !important;
+                		}
+                		.card-body {
+							@include display-flex;
+							@include flex-flow(column, wrap);
+							@include justify-content(center);
+							@include align-items(center);
+							width: 100%;
+							min-height: 220px;
+							margin-left: 0;
+							.card-title {
+								width: 100%;
+								max-width: 800px;
+								font-family: $font-family-fourth;
+								line-height: 30px;
+								font-size: 17px;
+				                font-weight: 500;
+				                text-align: center;
+				                color: rgba(white, 0.7);
+				                padding: 3px 15px 3px 15px;
+                                margin: 0;
+                                margin-bottom: 10px;
+							}
+                		}
+                	}
+    			}
+    		}
+    	}
+    }
+}
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 1200px) {
+    
+    #quienes-somos {
+        .wrap-quienes-somos {
+            h2.titulo-texto {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 967px) {
+    
+    #quienes-somos {
+        .wrap-quienes-somos {
+            h2.titulo-texto {
+                font-size: 30px;
+            }
+        }
+
+        .wrap-logo-footer {
+            max-width: 350px;
+        }
+    }
+}

@@ -1,0 +1,214 @@
+@import "../base/_fonts_n_colors";
+
+
+
+
+
+//============================================================================//
+//    TESTIMONIOS
+//============================================================================//
+#testimonios {
+	@include display-flex;
+    @include flex-flow(column, nowrap);
+    @include justify-content(center);
+    @include align-items(center);
+	min-height: 250px;
+    background: url('../img/participar-bg.png') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    width: 100%;
+    padding: 60px 10%;
+    position: relative;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+
+    .wrap-testimonios {
+        margin-top: 50px;
+
+    	h2.titulo-texto {
+    		font-family: $font-family-third;
+            color: #ff2c92;
+            font-weight: 600;
+            font-size: 55px;
+            text-align: center;
+            margin: 0 0 40px 0;
+            padding: 0;
+            width: 100%;
+        }
+
+    	.contenedor {
+            max-width: 800px;
+            //background: red;
+    		.row {
+                width: 100%;
+                @include display-flex;
+                @include flex-flow(row, wrap);
+                @include justify-content(center);
+                @include align-items(center);
+                   margin: 0;
+                    padding: 0;
+
+                .wrap-card {
+                    //background: blue;
+                    max-width: 800px;
+                    margin: 0;
+                    padding: 0;
+
+                    .card-filas {
+                        width: 100%;
+                        margin-right: 20px;
+                        @include display-flex;
+                        @include flex-flow(row, nowrap);
+                        @include justify-content(center);
+                        @include align-items(center);
+                        //background: violet;
+                        .cardcollege {
+                            width: 100%;
+                            margin-bottom: 40px;
+                            padding: 0;
+                            border: 0;
+                            background: $color-white;
+                            @include border-radius(0);
+                            @include box-shadow(0 2px 5px rgba(0,0,0, 0.15));
+
+                            img {
+                                width: 100%;
+                                height: auto !important;
+                            }
+                            .card-body {
+                                @include display-flex;
+                                @include flex-flow(column, wrap);
+                                @include justify-content(center);
+                                @include align-items(center);
+                                width: 100%;
+                                min-height: 280px;
+                                .card-title {
+                                    font-family: $font-family-fourth;
+                                    line-height: 30px;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    text-align: center;
+                                    color: #535353;
+                                    padding: 30px 30px 30px 30px;
+                                }
+                            }
+                            &.card-1 {
+                                margin-right: 30px;
+                            }
+                            &.card-3 {
+                                margin-right: 30px;
+                            }
+                        }
+                    }
+                }
+    		}
+    	}
+    }
+}
+
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 1200px) {
+    
+    #testimonios {
+        .wrap-testimonios {
+            h2.titulo-texto {
+                font-size: 50px;
+            }
+
+            .contenedor {
+                max-width: 600px;
+                .row {
+                    .wrap-card {
+                        max-width: 600px;
+
+                        .card-filas {
+                            width: 100%;
+                            margin-right: 20px;
+                            .cardcollege {
+                                margin-bottom: 30px;
+                                .card-body {
+                                    min-height: 200px;
+                                    .card-title {
+                                        line-height: 25px;
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                        padding: 15px 15px 15px 15px;
+                                    }
+                                }
+                                &.card-1 {
+                                    margin-right: 20px;
+                                }
+                                &.card-3 {
+                                    margin-right: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 967px) {
+    
+    #testimonios {
+        .wrap-testimonios {
+            h2.titulo-texto {
+                font-size: 30px;
+            }
+
+            .contenedor {
+                max-width: 300px;
+                .row {
+                    .wrap-card {
+                        max-width: 300px;
+
+                        .card-filas {
+                            @include flex-flow(column, nowrap);
+                            width: 100%;
+                            margin-right: 20px;
+                            .cardcollege {
+                                margin-bottom: 40px;
+                                .card-body {
+                                    //min-height: 200px;
+                                    min-height: auto;
+                                    .card-title {
+                                        line-height: 25px;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        padding: 15px 15px 15px 15px;
+                                    }
+                                }
+                                &.card-1 {
+                                    margin-right: 0;
+                                }
+                                &.card-3 {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+//============================================================================//
+//    GLOBAL MODAL
+//============================================================================//
+
+.modal {
+
+    .modal-dialog {
+
+        .modal-content {
+
+            // header
+            .modal-header {
+
+                .modal-title {
+                    color: $color-inverse;
+                    font-family: $font-family-secondary;
+                    font-size: 24px;
+                }
+
+                .close {
+                    outline: none;
+                }
+            }
+
+            // body
+            .modal-body {
+
+                h4 {
+                    color: $color-inverse;
+                    font-family: $font-family-base;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .modal-full {
+        width: 90%;
+    }
+}

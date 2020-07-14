@@ -1,0 +1,268 @@
+//
+// Table of contents
+//
+// TABLE TOP SEARCH...............records, search, info, table.
+//
+// PAGINATION.....................table pagination.
+//
+// ICONS SORTING A-Z..............sorting A-Z icons.
+//
+// TABLE TOOLS....................display print, actions buttons.
+//
+
+
+
+
+//============================================================================//
+//    TABLE TOP SEARCH AND ACTIONS
+//============================================================================//
+
+.dataTables_wrapper {
+
+    //records per page
+    .dataTables_length {
+
+        label {
+            float: left;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        select {
+            width: 75px;
+            margin: 0 10px 0 10px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+
+    //search
+    .dataTables_filter {
+
+        label {
+            float: right;
+            font-weight: normal;
+        }
+
+        input {
+            width: 16em;
+            margin: 0 20px 0 10px;
+        }
+    }
+
+    //bottom info
+    .dataTables_info {
+        padding-top: 8px;
+    }
+
+    //table
+    .dataTable {
+        clear: both;
+        max-width: none !important;
+        margin-top: 6px !important;
+        margin-bottom: 6px !important;
+
+        thead {
+            .sorting, .sorting_asc, .sorting_desc, .sorting_asc_disabled, .sorting_desc_disabled {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+
+
+//============================================================================//
+//    PAGINATION
+//============================================================================//
+
+.dataTables_paginate {
+    float: right;
+    margin: 0;
+
+    .pagination {
+        display: inline-block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 0;
+        border-radius: 0.25rem;
+
+        .paginate_button {
+            display: inline;
+
+            &.active {
+                a, &:focus, &:hover {
+                    cursor: default;
+                    color: $color-white;
+                    border-color: darken($color-inverse, 10%);
+                    background-color: $color-inverse;
+                }
+            }
+
+            &.disabled {
+                a, &:focus, &:hover {
+                    cursor: not-allowed;
+                    color: rgba($color-inverse, 0.6);
+                    border-color: darken($color-white, 10%);
+                    background-color: $color-white;
+                }
+            }
+        }
+
+        a {
+            position: relative;
+            float: left;
+            margin-left: -1px;
+            padding: 0.5rem 0.75rem;
+            text-decoration: none;
+            color: $color-inverse;
+            border: 1px solid $color-inverse;
+            background-color: $color-white;
+            line-height: 1.5;
+            @include transition(0.3s);
+
+            &:hover, &:focus {
+                text-decoration: none;
+                color: $color-inverse;
+                border-color: $color-inverse;
+                background-color: $color-primary;
+            }
+        }
+    }
+}
+
+
+
+//============================================================================//
+//    ICONS SORTING A-Z
+//============================================================================//
+
+table.dataTable {
+
+    thead {
+
+        .sorting,
+        .sorting_asc,
+        .sorting_desc,
+        .sorting_asc_disabled,
+        .sorting_desc_disabled {
+
+            &::after {
+                font-family: 'material-design-iconic-font';
+                float: right;
+                clear: both;
+            }
+        }
+
+        .sorting {
+
+            &::after{
+                content: "\f30c";
+            }
+        }
+
+        .sorting_asc {
+
+            &::after{
+                content: "\f1cf";
+                color: $color-primary;
+            }
+        }
+
+        .sorting_asc_disabled {
+            &::after{
+                content: "\f1cd";
+            }
+        }
+
+        .sorting_desc {
+
+            &::after{
+                content: "\f1d0";
+                color: $color-primary;
+            }
+        }
+
+        .sorting_desc_disabled {
+            &::after{
+                content: "\f1ce";
+            }
+        }
+    }
+
+    th {
+
+        &:active {
+            outline: none;
+        }
+    }
+}
+
+
+
+
+
+//============================================================================//
+//    TABLE TOOLS
+//============================================================================//
+
+//display print
+body.DTTT_Print {
+    background: $color-white !important;
+}
+
+.DTTT_Print #wrapper {
+    margin: 0 !important;
+    background: $section-color !important;
+}
+
+div.DTTT_print_info.modal {
+    height: 150px;
+    margin-top: -75px;
+    text-align: center;
+}
+
+div.DTTT_print_info h6 {
+    margin: 1em;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+div.DTTT_print_info p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+// actions buttons Copy - CSV - Excel - PDF - Print
+button.DTTT_button, div.DTTT_button, a.DTTT_button {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+    //padding-left: 0;
+    //padding-top: 0;
+    border: 1px solid $color-grey !important;
+    background: white !important;
+    color: $color-inverse !important;
+    text-align: center;
+
+
+    /*DTTT_button_pdf {
+        content: "f1c1";
+        background: red !important;
+    }*/
+}
+
+button.DTTT_button:hover, div.DTTT_button:hover, a.DTTT_button:hover {
+    border: 1px solid  $color-inverse !important;
+    background: $color-inverse !important;
+    color: $color-white !important;
+    @include box-shadow(0 0 0 0 !important) ;
+}
+
+.dataTables_filter label {
+    margin-right: 5px !important;
+}

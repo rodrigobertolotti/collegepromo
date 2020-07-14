@@ -1,0 +1,380 @@
+//
+// TABLE OF CONTENTS
+//
+// GLOBAL CARDS
+// Card...........................Card global.
+// ...............................Card img.
+// ...............................Card icon.
+// ...............................Card title.
+// ...............................Card header.
+// ...............................Card actions.
+// ...............................Card block.
+// ...............................Card box.
+// ...............................Card footer.
+//
+// CARDS COLOR VARIANTS
+//
+// CARDS BACKGROUND COLOR VARIANTS
+//
+// DRAGGABLE CARDS
+//
+
+
+//============================================================================//
+//	GLOBAL CARDS
+//============================================================================//
+
+.card {
+    z-index: 1;
+    width: 100%;
+    margin: 0 0 40px 0;
+    padding: 0;
+    border: 0;
+    background: $color-white;
+    @include border-radius(0);
+    @include box-shadow(0 2px 5px rgba(0,0,0, 0.15));
+
+    // card img top
+    .card-img-top {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    // card title
+    .card-title {
+        width: 100%;
+        margin: 0;
+        padding: 30px 20px 0 20px;
+        color: $color-inverse;
+        font-family: $font-family-secondary;
+        font-size: 18px;
+        font-weight: $font-weight-base;
+
+        a {
+            color: $card-info-color;
+        }
+    }
+
+    // card header
+    .card-header {
+        width: 100%;
+        margin: 0;
+        padding: 15px 20px 15px 20px;
+        border-top: 2px solid $card-color;
+        border-bottom: 1px solid $card-color;
+        background: $color-white;
+        @include border-radius(0);
+
+        .wrap-title-actions {
+            width: 100%;
+            margin: 0 0 5px 0;
+            @include border-radius(0);
+            @include display-flex;
+            @include flex-flow(row, nowrap);
+            @include justify-content(space-between);
+            @include align-items(center);
+
+            // card title in card header
+            .card-title {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                color: $color-inverse;
+                @include border-radius(0);
+                @include display-flex;
+                @include flex-flow(row, nowrap);
+
+                i {
+                    width: auto;
+                    padding: 0 10px 0 0;
+                }
+            }
+
+
+            // card actions
+            .actions {
+                width: 60px;
+                height: 30px;
+                list-style: none;
+                @include display-flex;
+                @include flex-flow(row, nowrap);
+                @include justify-content(flex-start);
+                @include align-items(flex-start);
+
+                .open {
+                    .btn-actions {
+                        i {
+                            display: block;
+                            color: darken($card-color, 30%);
+                        }
+
+                        //opacity for first circle if this active
+                        &:after {
+                            opacity: 1;
+                            @include scale3d(1, 1, 1);
+                        }
+                    }
+                }
+
+                .btn-group {
+                    display: inline-block;
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    padding: 0;
+                    margin: 0;
+                    .btn-actions {
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        @include display-flex;
+                        @include flex-flow(row, nowrap);
+                        @include justify-content(center);
+                        @include align-items(center);
+                    }
+                }
+
+                .btn-actions {
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    text-align: center;
+                    vertical-align: baseline;
+                    text-decoration: none;
+                    background: none;
+                    outline: none;
+                    border: none;
+                    @include display-flex;
+                    @include flex-flow(row, nowrap);
+                    @include justify-content(center);
+                    @include align-items(center);
+
+                    &:hover {
+                        i {
+                            color: darken($card-color, 30%);
+                        }
+
+                        //opacity for first circle
+                        &:after {
+                            opacity: 1;
+
+                            @include scale3d(1, 1, 1);
+                        }
+                    }
+
+                    //create a circle whith opacity 0
+                    &:after {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        content: '';
+                        opacity: 0;
+                        background: rgba($card-color, 0.3);
+                        @include scale3d(0, 0, 0);
+                        @include transition(0.5s);
+                        @include border-radius(50%);
+                    }
+
+                    i {
+                        color: $card-color;
+                        font-size: 24px;
+                        @include transition(0.8s);
+                    }
+                }
+            }
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+            small {
+                padding: 10px 0 0 0;
+                color: rgba($color-inverse, 0.9);
+                font-family: $font-family-base;
+                font-size: 12px;
+                font-weight: $font-weight-base;
+                line-height: 20px;
+            }
+        }
+
+
+    }
+
+    // card block
+    .card-block {
+        width: 100%;
+        padding: 20px 20px 20px 20px;
+        margin: 0;
+        color: rgba($color-inverse, 0.9);
+        border: 0;
+        border-image: none;
+        background: $color-white;
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        .card-link {
+            display: inline-block;
+            padding: 15px 0 0 0;
+            color: $card-info-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        //card box
+        .card-box {
+
+            .card-box {
+                padding-left: 15px;
+            }
+
+            p, .card-text {
+                color: $card-info-color;
+                font-size: $font-size-base;
+                font-weight: 600;
+                margin-bottom: 5px;
+
+                small {
+                    display: block;
+                    margin: 5px 0 0 0;
+                    color: rgba($color-inverse, 0.9);
+                    font-family: $font-family-base;
+                    font-size: 14px;
+                    font-weight: $font-weight-base;
+                    line-height: 20px;
+                }
+            }
+
+            .btn {
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+
+    .card-block.card-collapse {
+    }
+
+    //card footer
+    .card-footer {
+        width: 100%;
+        background: $color-white;
+        padding: 15px 20px 15px 20px;
+        @include border-radius(0);
+
+        h5 {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            font-family: $font-family-secondary;
+            font-size: 14px;
+            font-weight: $font-weight-base;
+        }
+    }
+}
+
+
+
+
+
+//============================================================================//
+//    CARDS COLOR VARIANTS
+//============================================================================//
+
+.card {
+    @include card-color-variant($card-color, $card-bg, $card-border)
+}
+.card-inverse {
+    @include card-color-variant($card-inverse-color, $card-inverse-bg, $card-inverse-border);
+}
+.card-primary {
+    @include card-color-variant($card-primary-color, $card-primary-bg, $card-primary-border);
+}
+.card-third {
+    @include card-color-variant($card-third-color, $card-third-bg, $card-third-border);
+}
+.card-fourth {
+    @include card-color-variant($card-fourth-color, $card-fourth-bg, $card-fourth-border);
+}
+.card-fifth {
+    @include card-color-variant($card-fifth-color, $card-fifth-bg, $card-fifth-border);
+}
+.card-success {
+    @include card-color-variant($card-success-color, $card-success-bg, $card-success-border);
+}
+.card-info {
+    @include card-color-variant($card-info-color, $card-info-bg, $card-info-border);
+}
+.card-warning {
+    @include card-color-variant($card-warning-color, $card-warning-bg, $card-warning-border);
+}
+.card-danger {
+    @include card-color-variant($card-danger-color, $card-danger-bg, $card-danger-border);
+}
+
+
+
+
+
+//============================================================================//
+//    CARDS BACKGROUND COLOR VARIANTS
+//============================================================================//
+
+.card-bg {
+    @include card-bg-variant($card-color, $card-bg, $card-border);
+}
+.card-inverse-bg {
+    @include card-bg-variant($card-inverse-color, $card-inverse-bg, $card-inverse-border);
+}
+.card-primary-bg {
+    @include card-bg-variant($card-primary-color, $card-primary-bg, $card-primary-border);
+}
+.card-third-bg {
+    @include card-bg-variant($card-third-color, $card-third-bg, $card-third-border);
+}
+.card-fourth-bg {
+    @include card-bg-variant($card-fourth-color, $card-fourth-bg, $card-fourth-border);
+}
+.card-fifth-bg {
+    @include card-bg-variant($card-fifth-color, $card-fifth-bg, $card-fifth-border);
+}
+.card-success-bg {
+    @include card-bg-variant($card-success-color, $card-success-bg, $card-success-border);
+}
+.card-info-bg {
+    @include card-bg-variant($card-info-color, $card-info-bg, $card-info-border);
+}
+.card-warning-bg {
+    @include card-bg-variant($card-warning-color, $card-warning-bg, $card-warning-border);
+}
+.card-danger-bg {
+    @include card-bg-variant($card-danger-color, $card-danger-bg, $card-danger-border);
+}
+
+
+
+
+
+//============================================================================//
+//	DRAGGABLE CARDS
+//============================================================================//
+
+.ui-sortable .card-header {
+    cursor: move;
+}
+.ui-sortable-placeholder {
+    visibility: visible !important;
+    border: 2px dashed rgba($card-inverse-color, 0.5) !important;
+    background: rgba($color-grey, 0.5)!important;
+}
+
+.ibox.ui-sortable-placeholder {
+    margin: 0 0 23px !important;
+}

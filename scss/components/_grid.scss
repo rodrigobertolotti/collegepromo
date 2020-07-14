@@ -1,0 +1,42 @@
+//============================================================================//
+//    GRID EXAMPLE
+//============================================================================//
+
+.grid-example {
+    margin: 0 0 10px 0;
+    padding: 15px 0 15px 0;
+    border: 1px solid rgba(86,61,124,0.2);
+    background: rgba(86,61,124,0.15);
+    p {
+        text-align: center;
+    }
+}
+
+.grid-example-nesting {
+    margin: 0 0 10px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid rgba(86,61,124,0.2);
+    background: rgba(86,61,124,0.15);
+
+    p {
+        width: 100%;
+        display: inline-block;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    .row{
+        margin-top: 20px;
+    }
+}
+
+.flex-example {
+    min-height: 10rem;
+    background-color: rgba(255,0,0,.1);
+    margin-bottom: 20px;
+    border: 1px solid rgba(86,61,124,0.2);
+    .col {
+        margin-bottom: 0;
+    }
+}

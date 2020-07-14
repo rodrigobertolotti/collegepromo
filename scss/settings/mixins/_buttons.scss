@@ -1,0 +1,85 @@
+//============================================================================//
+//    MIXIN BUTTON VARIANTS
+//============================================================================//
+
+@mixin button-variant($color, $background, $border) {
+    color: $color;
+    //border-color: darken($border, 10%);
+    background: $background;
+
+    &:hover, &.active, &:active, .open > &.dropdown-toggle {
+        color: $color;
+        //border-color: darken($border, 15%) !important;
+        background: darken($background, 10%) !important;
+        background-image: none;
+    }
+
+    &:focus, &.focus {
+        color: $color !important;
+        //border-color: darken($border, 15%) !important;
+        background: darken($background, 10%) !important;
+    }
+
+    &.disabled, &:disabled {
+        cursor: not-allowed;
+        //border-color: darken($border, 10%);
+        background: rgba($background, 0.9);
+        &:hover, &.active, &:active, .open > &.dropdown-toggle {
+            cursor: not-allowed;
+            color: $color;
+            //border-color: darken($border, 10%);
+            background: rgba($background, 0.9);
+        }
+    }
+}
+
+
+//============================================================================//
+//    MIXIN BUTTON GROUP VARIANTS
+//============================================================================//
+
+@mixin button-group-variant ($color, $background, $border) {
+    color: $color;
+    //border: solid 1px darken($border, 20%);
+    //border-bottom: solid 2px darken($border, 20%);
+    background: darken($background, 15%);
+    @include box-shadow(0 8px 17px 0 rgba(0,0,0,0.15));
+}
+
+
+
+
+
+//============================================================================//
+//    MIXIN BUTTON OUTLINE VARIANTS
+//============================================================================//
+
+@mixin button-outline-variant($color, $background, $border) {
+    border-color: $border;
+    background: transparent;
+    background-image: none;
+
+    &:hover, &.active, &:active, .open > &.dropdown-toggle {
+        color: $color-white !important;
+        border-color: darken($border, 10%);
+        background: $background;
+        background-image: none;
+        border-width: 1px;
+        @include box-shadow(0 0 0 0);
+    }
+
+    &:focus, &.focus {
+        color: $color-white !important;
+        border-color: darken($border, 15%) !important;
+        background: darken($background, 10%) !important;
+        border-width: 1px;
+        @include box-shadow(0 0 0 0);
+    }
+
+    &.disabled, &:disabled {
+        cursor: not-allowed;
+        border-color: darken($border, 10%);
+        background: rgba($background, 0.9);
+        border-width: 1px;
+    }
+}

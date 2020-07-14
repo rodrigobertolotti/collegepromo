@@ -1,0 +1,181 @@
+@import "fonts_n_colors";
+
+// Main Layout
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 40px; // sticky footer
+	background: #000;
+	color: $font-main-color;
+	font-family: $main-font;
+
+}
+
+
+div.content-wrap {
+
+	display: block;
+	width: 100%;
+	padding: 60px 10%;
+	position: relative;
+
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+div.full-page-wrap {
+	height: 100%;
+	min-height: 100% !important;
+}
+
+div.full-content-wrap {
+
+	display: block;
+	width: 100%;
+	padding: 0px;
+	position: relative;
+
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+
+// Texts & links 
+/*
+p {
+	
+	font-size: 15px;
+	line-height: 1.4;
+	color: $font-main-color;
+	font-family: $main-font;
+
+}
+*/
+a, a:link, a:visited {
+
+	text-decoration: none;
+	font-family: $main-font;
+
+	&.button {
+
+		font-size: 14px;
+		padding: 8px 16px;
+		border: 1px solid #fff;
+		color: #fff;
+
+		&.dark {
+			border: 1px solid $dark-green;
+			color: $dark-green;			
+		}
+	}
+}
+
+
+// widgets
+div.horizontal-line {
+
+	height: 1px;
+	background: #fff;
+	min-width: 30px;
+
+}
+
+div.vertical-line {
+
+	width: 1px;
+	background: #fff;
+	min-height: 60px;
+
+}
+
+
+// Desktop
+
+@media screen and (min-width: 820px) {
+
+	div.div-33 {
+		width: 33.3333%;
+	}
+
+	div.div-50 {
+		width: 50%;
+	}
+
+	div.div-67 {
+
+		width: 66.6666%;
+
+	}
+
+	div.full-content-wrap {
+		height: 100%;
+	}
+
+	p {
+		text-align: left;
+		font-size: 16px;
+	}
+
+}
+
+
+
+/*
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}*/

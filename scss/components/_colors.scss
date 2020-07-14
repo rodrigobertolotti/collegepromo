@@ -1,0 +1,431 @@
+//*
+//* TABLE OF CONTENTS
+//
+//* WRAP BOX COLOR
+//
+//* FONT COLOR / BORDER COLOR  / BACKGROUND COLOR
+//* Basic colors...................default, inverse, primary, secondary
+//* Social colors..................facebook, twitter, youtube, flickr
+//* Material designs color.........all material designs colors
+//* History colors.................baroque, russian, old
+//* Kids colors....................baby, kid, young
+//* Pastel colors..................pastel, dit pastel, dark pastel
+//* Nature colors..................nature
+//* Led colors.....................led
+//*
+
+//============================================================================//
+//	WRAP BOX COLOR
+//============================================================================//
+
+.box-color {
+    height: 100px;
+    margin: 0 0 20px 0;
+    @include display-flex;
+    @include flex-flow(row, nowrap);
+    @include justify-content(center);
+    @include align-items(center);
+
+    h4 {
+        width: 100%;
+        text-align: center;
+        color: $color-white;
+        font-family: $font-family-base;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+    }
+}
+
+.border-box {
+    border: solid 2px;
+}
+
+
+
+
+
+//============================================================================//
+//	FONT COLOR / BORDER-COLOR  / BACKGROUND-COLOR
+//============================================================================//
+
+@each $color-name, $color-var  in
+
+    // Basic color
+    (default, $color-default),
+    (inverse, $color-inverse),
+    (primary, $color-primary),
+    (secondary, $color-secondary),
+    (third, $color-third),
+    (fourth, $color-fourth),
+    (fifth, $color-fifth),
+    (success, $color-success),
+    (info, $color-info),
+    (warning, $color-warning),
+    (danger, $color-danger),
+
+    // Social colors
+    (facebook, $color-facebook),
+    (twitter, $color-twitter),
+    (youtube, $color-youtube),
+    (flickr, $color-flickr),
+    (linkedin, $color-linkedin),
+    (skype, $color-skype),
+    (pinterest, $color-pinterest),
+    (html5, $color-html5),
+    (github, $color-github),
+    (behance, $color-behance),
+    (whatsapp, $color-whatsapp),
+    (dropbox, $color-dropbox),
+    (android, $color-android),
+    (windows, $color-windows),
+    (apple, $color-apple),
+    (instagram, $color-instagram),
+    (yahoo, $color-yahoo),
+    (google-p, $color-google-p),
+
+    //Material designs colors
+    (md-red, $color-md-red),
+    (md-pink, $color-md-pink),
+    (md-purple, $color-md-purple),
+    (md-deep-purple, $color-md-deep-purple),
+    (md-indigo, $color-md-indigo),
+    (md-blue, $color-md-blue),
+    (md-light-blue, $color-md-light-blue),
+    (md-cyan, $color-md-cyan),
+    (md-teal, $color-md-teal),
+    (md-green, $color-md-green),
+    (md-light-green, $color-md-light-green),
+    (md-lime, $color-md-lime),
+    (md-yellow, $color-md-yellow),
+    (md-amber, $color-md-amber),
+    (md-orange, $color-md-orange),
+    (md-deep-orange, $color-md-deep-orange),
+    (md-brown, $color-md-brown),
+    (md-grey, $color-md-grey),
+    (md-blue-grey, $color-md-blue-grey),
+    (md-black, $color-md-black),
+    (md-white, $color-md-white) {
+
+    .color-#{$color-name},
+    .border-#{$color-name} {
+        color: $color-var !important;
+    }
+    .bg-#{$color-name} {
+        background-color: $color-var !important;
+    }
+}
+
+
+//History baroque color
+@for $i from 1 through 6 {
+
+    .color-baroque#{$i},
+    .border-baroque#{$i} {
+        @if $i == 1 { color: $color-baroque1; }
+        @else if $i == 2 { color: $color-baroque2; }
+        @else if $i == 3 { color: $color-baroque3; }
+        @else if $i == 4 { color: $color-baroque4; }
+        @else if $i == 5 { color: $color-baroque5; }
+        @else if $i == 6 { color: $color-baroque6; }
+    }
+
+    .bg-baroque#{$i} {
+        @if $i == 1 { background-color: $color-baroque1; }
+        @else if $i == 2 { background-color: $color-baroque2; }
+        @else if $i == 3 { background-color: $color-baroque3; }
+        @else if $i == 4 { background-color: $color-baroque4; }
+        @else if $i == 5 { background-color: $color-baroque5; }
+        @else if $i == 6 { background-color: $color-baroque6; }
+    }
+}
+
+
+//History russian color
+@for $i from 1 through 6 {
+
+    .color-russian#{$i},
+    .border-russian#{$i} {
+        @if $i == 1 { color: $color-russian1; }
+        @else if $i == 2 { color: $color-russian2; }
+        @else if $i == 3 { color: $color-russian3; }
+        @else if $i == 4 { color: $color-russian4; }
+        @else if $i == 5 { color: $color-russian5; }
+        @else if $i == 6 { color: $color-russian6; }
+    }
+
+    .bg-russian#{$i} {
+        @if $i == 1 { background-color: $color-russian1; }
+        @else if $i == 2 { background-color: $color-russian2; }
+        @else if $i == 3 { background-color: $color-russian3; }
+        @else if $i == 4 { background-color: $color-russian4; }
+        @else if $i == 5 { background-color: $color-russian5; }
+        @else if $i == 6 { background-color: $color-russian6; }
+    }
+}
+
+
+//History old color
+@for $i from 1 through 5 {
+
+    .color-old#{$i},
+    .border-old#{$i} {
+        @if $i == 1 { color: $color-old1; }
+        @else if $i == 2 { color: $color-old2; }
+        @else if $i == 3 { color: $color-old3; }
+        @else if $i == 4 { color: $color-old4; }
+        @else if $i == 5 { color: $color-old5; }
+    }
+
+    .bg-old#{$i} {
+        @if $i == 1 { background-color: $color-old1; }
+        @else if $i == 2 { background-color: $color-old2; }
+        @else if $i == 3 { background-color: $color-old3; }
+        @else if $i == 4 { background-color: $color-old4; }
+        @else if $i == 5 { background-color: $color-old5; }
+    }
+}
+
+
+//Kids baby colors
+@for $i from 1 through 6 {
+
+    .color-baby#{$i},
+    .border-baby#{$i} {
+        @if $i == 1 { color: $color-baby1; }
+        @else if $i == 2 { color: $color-baby2; }
+        @else if $i == 3 { color: $color-baby3; }
+        @else if $i == 4 { color: $color-baby4; }
+        @else if $i == 5 { color: $color-baby5; }
+        @else if $i == 6 { color: $color-baby6; }
+    }
+
+    .bg-baby#{$i} {
+        @if $i == 1 { background-color: $color-baby1; }
+        @else if $i == 2 { background-color: $color-baby2; }
+        @else if $i == 3 { background-color: $color-baby3; }
+        @else if $i == 4 { background-color: $color-baby4; }
+        @else if $i == 5 { background-color: $color-baby5; }
+        @else if $i == 6 { background-color: $color-baby6; }
+    }
+}
+
+
+//Kids kid colors
+@for $i from 1 through 6 {
+
+    .color-kid#{$i},
+    .border-kid#{$i} {
+        @if $i == 1 { color: $color-kid1; }
+        @else if $i == 2 { color: $color-kid2; }
+        @else if $i == 3 { color: $color-kid3; }
+        @else if $i == 4 { color: $color-kid4; }
+        @else if $i == 5 { color: $color-kid5; }
+        @else if $i == 6 { color: $color-kid6; }
+    }
+
+    .bg-kid#{$i} {
+        @if $i == 1 { background-color: $color-kid1; }
+        @else if $i == 2 { background-color: $color-kid2; }
+        @else if $i == 3 { background-color: $color-kid3; }
+        @else if $i == 4 { background-color: $color-kid4; }
+        @else if $i == 5 { background-color: $color-kid5; }
+        @else if $i == 6 { background-color: $color-kid6; }
+    }
+}
+
+
+//Kids young colors
+@for $i from 1 through 4 {
+
+    .color-young#{$i},
+    .border-young#{$i} {
+        @if $i == 1 { color: $color-young1; }
+        @else if $i == 2 { color: $color-young2; }
+        @else if $i == 3 { color: $color-young3; }
+        @else if $i == 4 { color: $color-young4; }
+    }
+
+    .bg-young#{$i} {
+        @if $i == 1 { background-color: $color-young1; }
+        @else if $i == 2 { background-color: $color-young2; }
+        @else if $i == 3 { background-color: $color-young3; }
+        @else if $i == 4 { background-color: $color-young4; }
+    }
+}
+
+
+//Pastel colors
+@for $i from 1 through 6 {
+
+    .color-pastel#{$i},
+    .border-pastel#{$i} {
+        @if $i == 1 { color: $color-pastel1; }
+        @else if $i == 2 { color: $color-pastel2; }
+        @else if $i == 3 { color: $color-pastel3; }
+        @else if $i == 4 { color: $color-pastel4; }
+        @else if $i == 5 { color: $color-pastel5; }
+        @else if $i == 6 { color: $color-pastel6; }
+    }
+
+    .bg-pastel#{$i} {
+        @if $i == 1 { background-color: $color-pastel1; }
+        @else if $i == 2 { background-color: $color-pastel2; }
+        @else if $i == 3 { background-color: $color-pastel3; }
+        @else if $i == 4 { background-color: $color-pastel4; }
+        @else if $i == 5 { background-color: $color-pastel5; }
+        @else if $i == 6 { background-color: $color-pastel6; }
+    }
+}
+
+
+//Pastel dit colors
+@for $i from 1 through 4 {
+
+    .color-ditpastel#{$i},
+    .border-ditpastel#{$i} {
+        @if $i == 1 { color: $color-ditpastel1; }
+        @else if $i == 2 { color: $color-ditpastel2; }
+        @else if $i == 3 { color: $color-ditpastel3; }
+        @else if $i == 4 { color: $color-ditpastel4; }
+    }
+
+    .bg-ditpastel#{$i} {
+        @if $i == 1 { background-color: $color-ditpastel1; }
+        @else if $i == 2 { background-color: $color-ditpastel2; }
+        @else if $i == 3 { background-color: $color-ditpastel3; }
+        @else if $i == 4 { background-color: $color-ditpastel4; }
+    }
+}
+
+
+//Pastel dark colors
+@for $i from 1 through 5 {
+
+    .color-darkpastel#{$i},
+    .border-darkpastel#{$i} {
+        @if $i == 1 { color: $color-darkpastel1; }
+        @else if $i == 2 { color: $color-darkpastel2; }
+        @else if $i == 3 { color: $color-darkpastel3; }
+        @else if $i == 4 { color: $color-darkpastel4; }
+        @else if $i == 5 { color: $color-darkpastel5; }
+    }
+
+    .bg-darkpastel#{$i} {
+        @if $i == 1 { background-color: $color-darkpastel1; }
+        @else if $i == 2 { background-color: $color-darkpastel2; }
+        @else if $i == 3 { background-color: $color-darkpastel3; }
+        @else if $i == 4 { background-color: $color-darkpastel4; }
+        @else if $i == 5 { background-color: $color-darkpastel5; }
+    }
+}
+
+
+//Nature colors
+@for $i from 1 through 12 {
+
+    .color-nature#{$i},
+    .border-nature#{$i} {
+        @if $i == 1 { color: $color-nature1; }
+        @else if $i == 2 { color: $color-nature2; }
+        @else if $i == 3 { color: $color-nature3; }
+        @else if $i == 4 { color: $color-nature4; }
+        @else if $i == 5 { color: $color-nature5; }
+        @else if $i == 6 { color: $color-nature6; }
+        @else if $i == 7 { color: $color-nature7; }
+        @else if $i == 8 { color: $color-nature8; }
+        @else if $i == 9 { color: $color-nature9; }
+        @else if $i == 10 { color: $color-nature10; }
+        @else if $i == 11 { color: $color-nature11; }
+        @else if $i == 12 { color: $color-nature12; }
+    }
+
+    .bg-nature#{$i} {
+        @if $i == 1 { background-color: $color-nature1; }
+        @else if $i == 2 { background-color: $color-nature2; }
+        @else if $i == 3 { background-color: $color-nature3; }
+        @else if $i == 4 { background-color: $color-nature4; }
+        @else if $i == 5 { background-color: $color-nature5; }
+        @else if $i == 6 { background-color: $color-nature6; }
+        @else if $i == 7 { background-color: $color-nature7; }
+        @else if $i == 8 { background-color: $color-nature8; }
+        @else if $i == 9 { background-color: $color-nature9; }
+        @else if $i == 10 { background-color: $color-nature10; }
+        @else if $i == 11 { background-color: $color-nature11; }
+        @else if $i == 12 { background-color: $color-nature12; }
+    }
+}
+
+
+//Led colors
+@for $i from 1 through 12 {
+
+    .color-led#{$i},
+    .border-led#{$i} {
+        @if $i == 1 { color: $color-led1; }
+        @else if $i == 2 { color: $color-led2; }
+        @else if $i == 3 { color: $color-led3; }
+        @else if $i == 4 { color: $color-led4; }
+        @else if $i == 5 { color: $color-led5; }
+        @else if $i == 6 { color: $color-led6; }
+        @else if $i == 7 { color: $color-led7; }
+        @else if $i == 8 { color: $color-led8; }
+        @else if $i == 9 { color: $color-led9; }
+        @else if $i == 10 { color: $color-led10; }
+        @else if $i == 11 { color: $color-led11; }
+        @else if $i == 12 { color: $color-led12; }
+    }
+
+    .bg-led#{$i} {
+        @if $i == 1 { background-color: $color-led1; }
+        @else if $i == 2 { background-color: $color-led2; }
+        @else if $i == 3 { background-color: $color-led3; }
+        @else if $i == 4 { background-color: $color-led4; }
+        @else if $i == 5 { background-color: $color-led5; }
+        @else if $i == 6 { background-color: $color-led6; }
+        @else if $i == 7 { background-color: $color-led7; }
+        @else if $i == 8 { background-color: $color-led8; }
+        @else if $i == 9 { background-color: $color-led9; }
+        @else if $i == 10 { background-color: $color-led10; }
+        @else if $i == 11 { background-color: $color-led11; }
+        @else if $i == 12 { background-color: $color-led12; }
+    }
+}
+
+
+
+
+
+//============================================================================//
+//     RESPONSIVE // small screen / phone / <= 767px  / bootstrap .col-sm
+//============================================================================//
+
+@media (max-width: 767px) {
+
+    .box-color {
+        height: 80px;
+        h4 {
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE // extra small screen / phone / <= 543px  / bootstrap .col-xs
+//============================================================================//
+
+@media (max-width: 543px) {
+
+    .box-color {
+        height: 60px;
+        h4 {
+            font-size: 14px;
+        }
+    }
+}

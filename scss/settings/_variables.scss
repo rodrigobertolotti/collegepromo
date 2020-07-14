@@ -1,0 +1,404 @@
+//
+// Table of contents
+//
+// OPTIONS........................skins global styles.
+//
+// COLORS.........................basic colors, theme colors.
+//
+// LAYOUT.........................body, navbar, section, links.
+//
+// TYPOGRAPHY.....................settings for the fonts.
+//
+// COMPONENTS.....................buttons, cards.
+//
+// LUTHER COLORS..................useful luther colors.
+//
+
+
+
+//============================================================================//
+//    OPTIONS
+//============================================================================//
+
+$enable-flex:               true !default;
+$enable-rounded:            true !default;
+$enable-shadows:            true !default;
+$enable-gradients:          true !default;
+$enable-transitions:        true !default;
+
+
+
+
+
+//============================================================================//
+//    COLORS
+//============================================================================//
+
+//Basic colors
+$color-grey:		#7C7C82;	// gris
+$color-grey-2:		#F2F2F4;	// gris
+$color-grey-3:		#DBE4E8;	// gris
+$color-light-grey:	#A7B1C2;	// gris claro
+
+$color-dark-grey:   #3C3C3C;	// gris oscuro  333333
+$color-black:		#000000; 	// blanco
+$color-white:		#FFFFFF; 	// negro
+
+//Theme colors
+$color-default: 		#BBD7DA;	// gris
+$color-inverse: 		#1E325A;	// azul oscuro
+$color-primary: 		#6f328a;	// azul
+$color-secondary: 		#BBD7DA;	// gris
+
+$color-third:			#fcc24f;	// amarillo
+$color-fourth:			#615CA8;	// violeta
+$color-fifth:			#ff2c92;	// naranja
+$color-success: 		#42C271;	// verde
+$color-info: 			#23C6C8;	// azul agua
+$color-warning: 		#F3B224;	// amarillo
+$color-danger: 			#CB2A2A;	// rojo
+
+
+$color-dorado-claro:    #C4BBAA;	// dorado
+
+
+
+
+//============================================================================//
+//    LAYOUT
+//============================================================================//
+
+// Body
+$body-bg:                    #FFFFFF !default;  // blanco;
+$body-color:                 #1E325A !default;    // blue dark;
+
+// Navbar Left
+$navbar-left-primary-closed-width:     60px !default;
+$navbar-left-primary-open-width:       220px !default;
+$navbar-left-secondary-width:          160px !default;
+$navbar-left-bg: 	                   #1E325A !default;	// blue dark
+
+// Navbar Top
+$navbar-top-height:		60px !default;
+$navbar-top-color: 	    #FFFFFF !default;	// blanco
+
+// Section
+$section-color:			#FFFFFF  !default;	// blanco
+
+// Footer
+$footer-height:		    45px !default;
+
+// Links
+$link-color:                 $color-info !default;
+$link-bg:                    transparent !default;
+$link-border:                transparent !default;
+$link-decoration:            none !default;
+$link-hover-color:           darken($link-color, 15%) !default;
+$link-hover-decoration:      underline !default;
+
+
+
+
+
+//============================================================================//
+//    TYPOGRAPHY - FONT FACE
+//============================================================================//
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i');
+
+
+$font-size-root:             16px !default;
+$font-family-base:          'Open Sans', sans-serif !default;
+$font-family-secondary:     'Open Sans', sans-serif !default;
+$font-family-third:         'Open Sans', sans-serif !default;
+$font-family-fourth:        'Open Sans', sans-serif !default;
+
+
+$font-page-title-color: 	#1E325A !default;	// blue dark
+
+$font-size-base:            1rem !default;
+$font-size-lg:              1.25rem !default;
+$font-size-sm:              .875rem !default;
+$font-size-xs:              .75rem !default;
+
+$font-size-h1:               2.5rem !default;
+$font-size-h2:               2rem !default;
+$font-size-h3:               1.75rem !default;
+$font-size-h4:               1.5rem !default;
+$font-size-h5:               1.25rem !default;
+$font-size-h6:               1rem !default;
+
+$display1-size:               6rem !default;
+$display2-size:               5.5rem !default;
+$display3-size:               4.5rem !default;
+$display4-size:               3.5rem !default;
+
+$display1-weight:             300 !default;
+$display2-weight:             300 !default;
+$display3-weight:             300 !default;
+$display4-weight:             300 !default;
+
+$line-height:               1.5 !default;
+$font-weight-base:          400 !default;
+
+$headings-margin-bottom:     (0.5rem) !default;
+$headings-font-family:       $font-family-base !default;
+$headings-font-weight:       500 !default;
+$headings-line-height:       1.1 !default;
+$headings-color:             #1E325A !default;
+
+$lead-font-size:             1.25rem !default;
+$lead-font-weight:           300 !default;
+
+$text-muted:                  $color-light-grey !default;
+
+
+
+
+
+//============================================================================//
+//    COMPONENTS
+//============================================================================//
+
+// Buttons
+$btn-font-weight:                400 !default;
+$btn-border-width:               0px !default;
+$btn-border-bottom-width:        0px !default;
+
+$btn-border-radius:              5px !default;
+$btn-border-radius-lg:           5px !default;
+$btn-border-radius-sm:           5px !default;
+
+$btn-inverse-color:               $color-inverse !default;              // grey
+$btn-inverse-bg:                  $color-inverse !default;              // green water
+$btn-inverse-border:              $color-inverse !default;              // green water
+
+$btn-primary-color:               $color-primary !default;              // green water
+$btn-primary-bg:                  $color-primary !default;              // green water
+$btn-primary-border:              $color-primary !default;              // green water
+
+$btn-secondary-color:             rgba($color-inverse, 0.5) !default;   // blue dark
+$btn-secondary-bg:                rgba($color-default, 0.4) !default;   // grey
+$btn-secondary-border:            $color-default !default;              // grey
+
+$btn-third-color:                 $color-third !default;                // pink
+$btn-third-bg:                    $color-third !default;                // pink
+$btn-third-border:                $color-third !default;                // pink
+
+$btn-fourth-color:                $color-fourth !default;               // purple
+$btn-fourth-bg:                   $color-fourth !default;               // purple
+$btn-fourth-border:               $color-fourth !default;               // purple
+
+$btn-fifth-color:                 $color-fifth !default;                // orange
+$btn-fifth-bg:                    $color-fifth !default;                // orange
+$btn-fifth-border:                $color-fifth !default;                // orange
+
+$btn-success-color:               $color-success !default;              // green
+$btn-success-bg:                  $color-success !default;              // green
+$btn-success-border:              $color-success !default;              // green
+
+$btn-info-color:                  $color-info !default;                 // blue water
+$btn-info-bg:                     $color-info !default;                 // blue water
+$btn-info-border:                 $color-info !default;                 // blue water
+
+$btn-warning-color:               $color-warning !default;              // yellow
+$btn-warning-bg:                  $color-warning !default;              // yellow
+$btn-warning-border:              $color-warning !default;              // yellow
+
+$btn-danger-color:                $color-danger !default;               // red
+$btn-danger-bg:                   $color-danger !default;               // red
+$btn-danger-border:               $color-danger !default;               // red
+
+$btn-link-color:                  $link-color !default;                 // green water
+$btn-link-bg:                     $link-bg !default;                    // transparent
+$btn-link-border:                 $link-border !default;                // none
+
+
+//Cards
+$card-color:               $color-grey !default;     // grey
+$card-bg:                  $color-grey !default;     // grey
+$card-border:              $color-grey !default;     // grey
+
+$card-inverse-color:       $color-inverse !default;  // blue dark
+$card-inverse-bg:          $color-inverse !default;  // blue dark
+$card-inverse-border:      $color-inverse !default;  // blue dark
+
+$card-primary-color:       $color-primary !default;  // green water
+$card-primary-bg:          $color-primary !default;  // green water
+$card-primary-border:      $color-primary !default;  // green water
+
+$card-third-color:         $color-third !default;    // pink
+$card-third-bg:            $color-third !default;    // pink
+$card-third-border:        $color-third !default;    // pink
+
+$card-fourth-color:        $color-fourth !default;   // purple
+$card-fourth-bg:           $color-fourth !default;   // purple
+$card-fourth-border:       $color-fourth !default;   // purple
+
+$card-fifth-color:         $color-fifth !default;    // orange
+$card-fifth-bg:            $color-fifth !default;    // orange
+$card-fifth-border:        $color-fifth !default;    // orange
+
+$card-success-color:       $color-success !default;  // green
+$card-success-bg:          $color-success !default;  // green
+$card-success-border:      $color-success !default;  // green
+
+$card-info-color:          $color-info !default;     // blue water
+$card-info-bg:             $color-info !default;     // blue water
+$card-info-border:         $color-info !default;     // blue waterv
+
+$card-info-color:          $color-info !default;     // blue water
+$card-info-bg:             $color-info !default;     // blue water
+$card-info-border:         $color-info !default;     // blue water
+
+$card-warning-color:       $color-warning !default;  // yellow
+$card-warning-bg:          $color-warning !default;  // yellow
+$card-warning-border:      $color-warning !default;  // yellow
+
+$card-danger-color:        $color-danger !default;   // red
+$card-danger-bg:           $color-danger !default;   // red
+$card-danger-border:       $color-danger !default;   // red
+
+
+
+
+
+//============================================================================//
+//    LUTHER COLORS
+//============================================================================//
+
+//Material design colors
+$color-md-red: 				#F44336;
+$color-md-pink: 			#E91E63;
+$color-md-purple: 			#9C27B0;
+$color-md-deep-purple: 		#673AB7;
+$color-md-indigo: 			#3F51B5;
+$color-md-blue: 			#2196F3;
+$color-md-light-blue: 		#03A9F4;
+$color-md-cyan: 			#00BCD4;
+$color-md-teal: 			#009688;
+$color-md-green: 			#4CAF50;
+$color-md-light-green: 		#8BC34A;
+$color-md-lime: 			#CDDC39;
+$color-md-yellow: 			#FFEB3B;
+$color-md-amber: 			#FFC107;
+$color-md-orange: 			#FF9800;
+$color-md-deep-orange: 		#FF5722;
+$color-md-brown: 			#795548;
+$color-md-grey: 			#607D8B;
+$color-md-blue-grey: 		#607D8B;
+$color-md-black:	 		#000000;
+$color-md-white: 			#FFFFFF;
+
+//Social colors
+$color-facebook: 		#3B5998;
+$color-twitter: 		#55ACEE;
+$color-youtube: 		#CD201F;
+$color-flickr: 			#FF0084;
+$color-linkedin: 		#0077B5;
+$color-skype: 			#00AFF0;
+$color-pinterest: 		#BD081C;
+$color-html5: 			#E34F26;
+$color-github: 			#333333;
+$color-behance: 		#1769FF;
+$color-whatsapp: 		#43D854;
+$color-dropbox: 		#007EE5;
+$color-android: 		#A4C639;
+$color-windows: 		#00BCF2;
+$color-apple: 			#A7A7A7;
+$color-instagram: 		#405De6;
+$color-yahoo: 			#410093;
+$color-google-p:	 	#DC4E41;
+
+//histoy colors
+$color-baroque1:   	#AD1A18;
+$color-baroque2:   	#68332D;
+$color-baroque3:   	#7B4E25;
+$color-baroque4:   	#AA5D3F;
+$color-baroque5:   	#54541E;
+$color-baroque6:   	#C38914;
+
+$color-russian1:   	#413253;
+$color-russian2:   	#CE9FB5;
+$color-russian3:   	#BD2F56;
+$color-russian4:   	#BD2234;
+$color-russian5:   	#FFDF8C;
+$color-russian6:   	#92B193;
+
+$color-old1:       	#D5861C;
+$color-old2:       	#C55416;
+$color-old3:       	#73493A;
+$color-old4:       	#412C28;
+$color-old5:       	#E3BD00;
+
+//kids colors
+$color-baby1:    #F0EC95;
+$color-baby2:    #8FDAEE;
+$color-baby3:    #D0DF92;
+$color-baby4:    #FFACB8;
+$color-baby5:    #FFC08C;
+$color-baby6:    #C09ADC;
+
+$color-kid1:      #E2023F;
+$color-kid2:      #FEC700;
+$color-kid3:      #3AAA35;
+$color-kid4:      #007BC4;
+$color-kid5:      #892A81;
+$color-kid6:      #E84E0F;
+
+$color-young1:     #009A9A;
+$color-young2:     #EE7130;
+$color-young3:     #602483;
+$color-young4:     #EE2230;
+
+//Pastel colors
+$color-pastel1:    		#C7164C;
+$color-pastel2:    		#F0CA7C;
+$color-pastel3:    		#1989B6;
+$color-pastel4:    		#E2856A;
+$color-pastel5:    		#5E5760;
+$color-pastel6:    		#84A982;
+
+$color-ditpastel1: 		#A7B2BB;
+$color-ditpastel2: 		#366592;
+$color-ditpastel3: 		#E2B759;
+$color-ditpastel4: 		#5C8057;
+
+$color-darkpastel1: 	#853F1B;
+$color-darkpastel2: 	#00517B;
+$color-darkpastel3: 	#E5951A;
+$color-darkpastel4: 	#9C1915;
+$color-darkpastel5: 	#025554;
+
+//Nature colors
+$color-nature1:    	#F6A000;
+$color-nature2:    	#FFDD00;
+$color-nature3:    	#95C11F;
+$color-nature4:    	#00A356;
+$color-nature5: 	#1D1D1B;
+$color-nature6:  	#E74011;
+$color-nature7:   	#BD2F56;
+$color-nature8:    	#D2B569;
+$color-nature9:    	#7C7640;
+$color-nature10:    #8E6008;
+$color-nature11:    #A0220A;
+$color-nature12:    #5F4100;
+
+//Led colors
+$color-led1:       #FF1744;
+$color-led2:       #FF3D00;
+$color-led3:       #AA00FF;
+$color-led4:       #651FFF;
+$color-led5:       #3D5AFE;
+$color-led6:       #2979FF;
+$color-led7:       #00FF99;
+$color-led8:       #76FF03;
+$color-led9:       #C6FF00;
+$color-led10:      #FFFF00;
+$color-led11:      #18FFFF;
+$color-led12:      #00CCFF;

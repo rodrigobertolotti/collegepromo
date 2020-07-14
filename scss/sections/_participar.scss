@@ -1,0 +1,957 @@
+@import "../base/_fonts_n_colors";
+
+#close-color {
+	color: white !important;
+}
+
+
+//============================================================================//
+//    PARTICIPAR
+//============================================================================//
+
+#participar {
+	@include display-flex;
+    @include flex-flow(column, nowrap);
+    @include justify-content(center);
+    @include align-items(center);
+	background: url('../img/participar-bg.png') center center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 250px;
+	position: relative;
+
+	&.college-modal-mostrar {
+		.college-modal {
+			@include display-flex;
+		}
+	}
+
+	&.college-modal-jugar-mostrar {
+		.college-modal-jugar {
+			@include display-flex;
+		}
+	}
+
+	&.college-modal-instagram-mostrar {
+		.college-modal-instagram {
+			@include display-flex;
+		}
+	}
+
+
+
+	.college-modal {
+		background: rgba(black,0.8);
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 99999;
+		@include display-flex;
+	    @include flex-flow(column, nowrap);
+	    @include justify-content(center);
+	    @include align-items(center);
+	    display: none;
+		.wrap-bases {
+			max-width: 1200px;
+			max-height: 800px;
+			overflow-y: scroll;
+			background: white;
+			padding: 50px 50px 50px 50px;
+			.wrap-header-bases {
+				@include display-flex;
+			    @include flex-flow(row, nowrap);
+			    @include justify-content(center);
+			    @include align-items(center);
+				background: #ff2c92;
+				width: 100%;
+				height: 80px;
+				margin-bottom: 50px;
+				h3 {
+					@include display-flex;
+				    @include flex-flow(row, nowrap);
+				    @include justify-content(flex-start);
+				    @include align-items(center);
+					padding: 0;
+					margin: 0;
+					margin-left: 50px;
+					height: 80px;
+					color: white;
+				}
+				a {
+					margin: 0;
+					@include display-flex;
+					margin-right: 50px;
+					margin-left: 20px;
+					span {
+						font-size: 18px;
+						padding: 0;
+						i {
+							font-size: 18px;
+							color: white;
+							padding: 0;
+						}
+					}
+				}
+			}
+			h3 {
+	    		font-family: $font-family-third;
+	            color: #ff2c92;
+	            font-weight: 600;
+	            font-size: 30;
+	            text-align: left;
+	            margin: 20px 0 30px 0;
+	            padding: 0;
+	            width: 100%;
+	        }
+	        li {
+	        }
+	        p {
+	    		font-family: $font-family-third;
+	            color: #231f20;
+	            font-weight: 500;
+	            font-size: 18;
+	            line-height: 25px;
+	            text-align: left;
+	            padding: 0;
+	            //width: 100%;
+	        }
+		}
+	}
+
+	.college-modal-jugar {
+		background: rgba(black,0.8);
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 99999;
+		@include display-flex;
+	    @include flex-flow(column, nowrap);
+	    @include justify-content(center);
+	    @include align-items(center);
+	    display: none;
+		.wrap-bases {
+			max-width: 1200px;
+			max-height: 800px;
+			overflow-y: scroll;
+			background: white;
+			padding: 50px 50px 50px 50px;
+			.wrap-header-bases {
+				@include display-flex;
+			    @include flex-flow(row, nowrap);
+			    @include justify-content(center);
+			    @include align-items(center);
+				background: #ff2c92;
+				width: 100%;
+				height: 80px;
+				margin-bottom: 50px;
+				h3 {
+					@include display-flex;
+				    @include flex-flow(row, nowrap);
+				    @include justify-content(center);
+				    @include align-items(center);
+					padding: 0;
+					margin: 0;
+					margin-left: 50px;
+					height: 80px;
+					color: white;
+				}
+				a {
+					margin: 0;
+					@include display-flex;
+					margin-right: 50px;
+					margin-left: 20px;
+					span {
+						font-size: 18px;
+						padding: 0;
+						i {
+							font-size: 18px;
+							color: white;
+							padding: 0;
+						}
+					}
+				}
+			}
+			h3 {
+	    		font-family: $font-family-third;
+	            color: #ff2c92;
+	            font-weight: 600;
+	            font-size: 30;
+	            text-align: left;
+	            margin: 20px 0 30px 0;
+	            padding: 0;
+	            width: 100%;
+	        }
+	        li {
+	        }
+	        p {
+	    		font-family: $font-family-third;
+	            color: #231f20;
+	            font-weight: 500;
+	            font-size: 18;
+	            line-height: 25px;
+	            text-align: left;
+	            padding: 0;
+	            //width: 100%;
+	        }
+		}
+	}
+
+
+
+
+
+	.college-modal-instagram {
+		background: rgba(black,0.8);
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 99999;
+		@include display-flex;
+	    @include flex-flow(column, nowrap);
+	    @include justify-content(flex-start);
+	    @include align-items(center);
+	    display: none;
+		.wrap-bases {
+			max-width: 400px;
+			max-height: 800px;
+			overflow-y: scroll;
+			background: white;
+			padding: 0px 0px 0px 0px;
+			margin-top: 30px;
+			.wrap-header-bases {
+				@include display-flex;
+			    @include flex-flow(row, nowrap);
+			    @include justify-content(center);
+			    @include align-items(center);
+				background: #ff2c92;
+				width: 100%;
+				height: 50px;
+				margin-bottom: 20px;
+				h3 {
+					@include display-flex;
+				    @include flex-flow(row, nowrap);
+				    @include justify-content(center);
+				    @include align-items(center);
+					padding: 0;
+					margin: 0;
+					margin-left: 50px;
+					height: 50px;
+					color: white;
+				}
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+
+    .wrap-participar {
+    	//background: yellow;
+    	width: 100%;
+    	margin-top: 50px;
+    	.container {
+    		max-width: 1050px;
+    		margin: 0 auto;
+    		.row {
+    			.wrap-formulario {
+    				width: 100%;
+    				margin: 0;
+                	padding: 0;
+					.form-participar {
+						width: 100%;
+					    background: #ff2c92;
+					    @include display-flex;
+	    				@include flex-flow(row, nowrap);
+	    				@include justify-content(center);
+	    				@include align-items(center);
+
+					    .form-box {
+					    	width: 80%;
+					    }
+
+					    .wrap-logo-mundial {
+							width: 100%;
+							@include display-flex;
+	    					@include flex-flow(row, nowrap);
+	    					@include justify-content(center);
+	    					@include align-items(center);
+
+							img {
+								width: 100%;
+								max-width: 150px;
+								display: block;
+								margin: 30px 0 0 0;
+							}
+							.wrap-btn {
+						    	@include display-flex;
+		    					@include flex-flow(row, nowrap);
+		    					@include justify-content(center);
+		    					@include align-items(center);
+						    	width: 100%;
+						    	margin-bottom: 30px;
+						    	margin-top: 30px;
+						        .btn {
+						        	margin-top: 40px;
+						        	margin-bottom: 20px;
+						            span {
+						            	color: $color-primary;
+						            	font-weight: 600;
+						                i {
+						                    color: $color-primary;
+						                    margin-right: 5px;
+						                }
+						            }
+						        }
+						    }
+						}
+
+					    .form-filas {
+					    	width: 100%;
+					    	//background: blue;
+					    	@include display-flex;
+	    					@include flex-flow(row, nowrap);
+	    					@include justify-content(center);
+	    					@include align-items(center);
+
+	    					.form-columnas {
+	    						width: 100%;
+	    						padding-left: 30px;
+	    						padding-right: 30px;
+	    						//background: violet;
+	    					}
+					    }
+					    .form-filas-mobile {
+						    display: none;
+						}
+					    .form-check {
+					    	width: 100%;
+					    	max-width: 300px;
+					    	height: 40px;
+					    	margin: 0 auto;
+					    	margin-top: 20px;
+					    	
+					    	input[type=checkbox] {
+								font-family: $font-family-fourth;
+					            font-weight: 600;
+					            display: block;
+					            background: none;
+					            padding: 6px 2px 1px;
+					            font-size: 18px;
+					            border-width: 0;
+					            border-color: transparent;
+					            margin-left: 0px;
+					            width: 100%;
+					            height: 30px;
+					            transition: all 0.28s ease;
+					            box-shadow: none;
+					            text-align: center;
+					            margin-bottom: 10px;
+					            color: red;
+					    	}
+					    	a {
+				            	color: #231f20;
+				            	font-size: 16px; //16
+				            	cursor: pointer;
+				            	font-weight: 600;
+				            	font-family: $font-family-fourth;
+				            	&:hover {
+				            		cursor: pointer;
+				            		color: white;
+				            		.control-label {
+										color: white;
+									}
+				            	}
+				            }
+					    	.control-label {
+					    		width: 100%;
+					            padding: 5px;
+					            margin-left: 5px;
+					            margin-top: 5px;
+					            margin-bottom: 10px;
+					            pointer-events: none;
+					            z-index: 1;
+					            color: #231f20;
+					            font-size: 16px; //16
+					            font-weight: 600;
+					            transition: all 0.28s ease;
+					            text-align: center;
+					            font-family: $font-family-fourth;
+					    	}
+					    }
+
+					    .form-group {
+					    	width: 100%;
+					        position: relative;
+					        margin-top: 40px;
+					        margin-bottom: 10px;
+					        height: 40px;
+					        background: white;
+
+					        .control-label {
+					            width: 100%;
+					            position: absolute;
+					            top: 1px;
+					            padding: 5px;
+					            margin-left: 5px;
+					            pointer-events: none;
+					            z-index: 1;
+					            color: $color-primary;
+					            font-size: 18px; //16
+					            font-weight: 600;
+					            transition: all 0.28s ease;
+					            text-align: left;
+					            font-family: $font-family-fourth;
+					            font-weight: 500;
+					        }
+
+					        .bar {
+					            position: relative;
+					            bottom: -2px;
+					            border-bottom: 2px solid $color-primary;
+					            display: block;
+
+					            &::before {
+					                content: '';
+					                height: 3px;
+					                width: 0;
+					                left: 50%;
+					                bottom: -2px;
+					                position: absolute;
+					                background: $color-third;
+					                transition: left 0.28s ease, width 0.28s ease;
+					                z-index: 2;
+					            }
+					        }
+
+					        input[type=number]::-webkit-inner-spin-button, 
+							input[type=number]::-webkit-outer-spin-button { 
+							  -webkit-appearance: none; 
+							  margin: 0; 
+							}
+
+					        input,
+					        input[type=email],
+					        select,
+					        textarea {
+					            font-family: $font-family-fourth;
+					            font-weight: 600;
+					            display: block;
+					            background: none;
+					            padding: 6px 2px 1px;
+					            font-size: 18px;
+					            border-width: 0;
+					            border-color: transparent;
+					            margin-left: 10px;
+					            width: 100%;
+					            height: 30px;
+					            transition: all 0.28s ease;
+					            box-shadow: none;
+					            text-align: center;
+					            text-align: left;
+
+					            &:focus,
+					            &:valid,
+					            &.form-file,
+					            &.has-value  {
+					                color: #22b679;
+					                font-weight: 700;
+					                ~ .control-label {
+					                    font-size: 14px;
+					                    color: #231f20;
+					                    top: -27px;
+					                    left: 0;
+					                    margin-left: -2px;
+					                }
+
+					            }
+					        }
+
+					        input,
+					        input[type=email],
+					        textarea {
+					            &:focus {
+					                outline: none;
+					                ~ .control-label {
+					                    color: #231f20;
+					                }
+					                ~ .bar {
+					                    &::before {
+					                        width: 100%;
+					                        left: 0;
+					                    }
+					                }
+					            }
+					        }
+
+					        textarea {
+					            height: auto;
+					        }
+					    }
+
+					    .wrap-btn {
+					    	@include display-flex;
+	    					@include flex-flow(row, nowrap);
+	    					@include justify-content(center);
+	    					@include align-items(center);
+					    	width: 100%;
+					    	margin-bottom: 30px;
+					        .btn {
+					        	margin-top: 40px;
+					        	margin-bottom: 20px;
+					            span {
+					            	font-weight: 600px;
+					                i {
+					                    color: $color-third;
+					                    margin-right: 5px;
+					                }
+					            }
+					        }
+					    }
+					}
+    			}
+    		}
+    	}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 1370px) {
+
+
+	
+	#participar {
+
+		&.college-modal-mostrar {
+			.college-modal {
+				@include display-flex;
+			}
+		}
+
+	    .wrap-participar {
+	    	width: 100%;
+	    	margin-top: 50px;
+	    	.container {
+	    		max-width: 800px;
+	    		margin: 0 auto;
+	    		.row {
+	    			.wrap-formulario {
+	    				width: 100%;
+						.form-participar {
+							width: 100%;
+						    .form-box {
+						    	width: 95%;
+						    }
+
+						    .wrap-logo-mundial {
+								img {
+									max-width: 150px;
+									margin: 30px 0 0 0;
+								}
+							}
+
+						    .form-filas {
+						    	width: 100%;
+						    	@include display-flex;
+		    					@include flex-flow(row, nowrap);
+		    					@include justify-content(center);
+		    					@include align-items(center);
+
+		    					.form-columnas {
+		    						width: 100%;
+		    						padding-left: 15px;
+		    						padding-right: 15px;
+		    						//background: violet;
+		    					}
+						    }
+						    .form-filas-mobile {
+							    display: none;
+							}
+						}
+	    			}
+	    		}
+	    	}
+	    }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 1120px) {
+
+
+	
+	#participar {
+
+		&.college-modal-mostrar {
+			.college-modal {
+				@include display-flex;
+			}
+		}
+
+	    .wrap-participar {
+	    	width: 100%;
+	    	margin-top: 50px;
+	    	.container {
+	    		max-width: 600px;
+	    		margin: 0 auto;
+	    		.row {
+	    			.wrap-formulario {
+	    				width: 100%;
+						.form-participar {
+							width: 100%;
+						    .form-box {
+						    	width: 95%;
+						    }
+
+						    .wrap-logo-mundial {
+						    	@include display-flex;
+		    					@include flex-flow(column, nowrap);
+		    					@include justify-content(center);
+		    					@include align-items(center);
+								img {
+									max-width: 150px;
+									margin: 30px 0 0 0;
+								}
+								.wrap-btn {
+							    	@include display-flex;
+			    					@include flex-flow(row, nowrap);
+			    					@include justify-content(center);
+			    					@include align-items(center);
+							    	width: 100%;
+							    	margin-bottom: 10px;
+							    	margin-top: 10px;
+							        .btn {
+							        	margin-top: 40px;
+							        	margin-bottom: 20px;
+							            span {
+							            	color: $color-primary;
+							            	font-weight: 600;
+							                i {
+							                    color: $color-primary;
+							                    margin-right: 5px;
+							                }
+							            }
+							        }
+							    }
+							}
+
+						    .form-filas {
+						    	width: 100%;
+						    	@include display-flex;
+		    					@include flex-flow(row, nowrap);
+		    					@include justify-content(center);
+		    					@include align-items(center);
+
+		    					.form-columnas {
+		    						width: 100%;
+		    						padding-left: 15px;
+		    						padding-right: 15px;
+		    						//background: violet;
+		    					}
+						    }
+						    .form-filas-full {
+						    	display: none;
+						    }
+						    .form-filas-mobile {
+							    @include display-flex;
+							}
+						}
+	    			}
+	    		}
+	    	}
+	    }
+	}
+}
+
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 915px) {
+
+
+	
+	#participar {
+
+		&.college-modal-mostrar {
+			.college-modal {
+				@include display-flex;
+			}
+		}
+
+	    .wrap-participar {
+	    	width: 100%;
+	    	margin-top: 50px;
+	    	.container {
+	    		max-width: 500px;
+	    		margin: 0 auto;
+	    		.row {
+	    			.wrap-formulario {
+	    				width: 100%;
+						.form-participar {
+							width: 100%;
+						    .form-box {
+						    	width: 80%;
+						    }
+
+						    .wrap-logo-mundial {
+								img {
+									max-width: 150px;
+									margin: 30px 0 0 0;
+								}
+							}
+
+						    .form-filas {
+						    	width: 100%;
+		    					@include flex-flow(column, nowrap);
+
+		    					.form-columnas {
+		    						padding-left: 15px;
+		    						padding-right: 15px;
+		    					}
+						    }
+						 
+						    .form-check {
+						    	width: 100%;
+						    	max-width: 300px;
+						    	height: 40px;
+						    	margin: 0 auto !important;
+						    	margin-top: 30px;
+						    	
+						    	input[type=checkbox] {
+									font-family: $font-family-fourth;
+						            font-weight: 600;
+						            display: block;
+						            background: none;
+						            padding: 6px 2px 1px;
+						            font-size: 18px;
+						            border-width: 0;
+						            border-color: transparent;
+						            margin-left: 0px;
+						            width: 100%;
+						            height: 30px;
+						            transition: all 0.28s ease;
+						            box-shadow: none;
+						            text-align: center;
+						            margin-bottom: 15px;
+						    	}
+						    	a {
+						    		width: 100%;
+						    		display: inline-block;
+					            	color: #231f20;
+					            	font-size: 14px; //16
+					            	cursor: pointer;
+					            	font-weight: 600;
+					            	font-family: $font-family-fourth;
+					            	margin-bottom: 60px;
+					            	height: 34px;
+					            	text-align: center;
+					            	&:hover {
+					            		cursor: pointer;
+					            		color: white;
+					            		.control-label {
+											color: white;
+										}
+					            	}
+					            }
+						    	.control-label {
+						    		width: 100%;
+						            padding: 5px;
+						            margin-left: 5px;
+						            margin-top: 5px;
+						            margin-bottom: 10px;
+						            pointer-events: none;
+						            z-index: 1;
+						            color: #231f20;
+						            font-size: 14px; //16
+						            font-weight: 600;
+						            transition: all 0.28s ease;
+						            text-align: center;
+						            font-family: $font-family-fourth;
+						    	}
+						    }
+
+						    .form-group {
+						    	width: 100%;
+						        position: relative;
+						        margin-top: 25px;
+						        margin-bottom: 10px;
+						        height: 40px;
+						        background: white;
+
+						        .control-label {
+						            width: 100%;
+						            position: absolute;
+						            top: 1px;
+						            padding: 5px;
+						            margin-left: 5px;
+						            pointer-events: none;
+						            z-index: 1;
+						            color: $color-primary;
+						            font-size: 18px; //16
+						            font-weight: 600;
+						            transition: all 0.28s ease;
+						            text-align: left;
+						            font-family: $font-family-fourth;
+						            font-weight: 500;
+						        }
+
+						        .bar {
+						            position: relative;
+						            bottom: -2px;
+						            border-bottom: 2px solid $color-primary;
+						            display: block;
+
+						            &::before {
+						                content: '';
+						                height: 3px;
+						                width: 0;
+						                left: 50%;
+						                bottom: -2px;
+						                position: absolute;
+						                background: $color-third;
+						                transition: left 0.28s ease, width 0.28s ease;
+						                z-index: 2;
+						            }
+						        }
+
+						        input[type=number]::-webkit-inner-spin-button, 
+								input[type=number]::-webkit-outer-spin-button { 
+								  -webkit-appearance: none; 
+								  margin: 0; 
+								}
+
+						        input,
+						        input[type=email],
+						        select,
+						        textarea {
+						            font-family: $font-family-fourth;
+						            font-weight: 600;
+						            display: block;
+						            background: none;
+						            padding: 6px 2px 1px;
+						            font-size: 18px;
+						            border-width: 0;
+						            border-color: transparent;
+						            margin-left: 10px;
+						            width: 100%;
+						            height: 30px;
+						            transition: all 0.28s ease;
+						            box-shadow: none;
+						            text-align: center;
+						            text-align: left;
+
+						            &:focus,
+						            &:valid,
+						            &.form-file,
+						            &.has-value  {
+						                color: #22b679;
+						                font-weight: 700;
+						                ~ .control-label {
+						                    font-size: 14px;
+						                    color: #231f20;
+						                    top: -27px;
+						                    left: 0;
+						                    margin-left: -2px;
+						                }
+
+						            }
+						        }
+
+						        input,
+						        input[type=email],
+						        textarea {
+						            &:focus {
+						                outline: none;
+						                ~ .control-label {
+						                    color: #231f20;
+						                }
+						                ~ .bar {
+						                    &::before {
+						                        width: 100%;
+						                        left: 0;
+						                    }
+						                }
+						            }
+						        }
+
+						        textarea {
+						            height: auto;
+						        }
+						    }
+
+						    .wrap-btn {
+						    	@include display-flex;
+		    					@include flex-flow(row, nowrap);
+		    					@include justify-content(center);
+		    					@include align-items(center);
+						    	width: 100%;
+						    	margin-bottom: 30px;
+						        .btn {
+						        	margin-top: 60px;
+						        	margin-bottom: 20px;
+						            span {
+						                i {
+						                    color: $color-third;
+						                    margin-right: 5px;
+						                }
+						            }
+						        }
+						    }
+						}
+	    			}
+	    		}
+	    	}
+	    }
+	}
+
+
+}

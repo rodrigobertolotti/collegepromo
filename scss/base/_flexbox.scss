@@ -1,0 +1,195 @@
+//============================================================================//
+//	DISPLAY FLEX
+//============================================================================//
+
+@mixin display-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+}
+
+
+
+
+
+
+//============================================================================//
+//	FLEX DIRECTION
+//============================================================================//
+
+@mixin flex-direction($direction) {
+
+            flex-direction: $direction;
+    -webkit-flex-direction: $direction;
+        -ms-flex-direction: $direction;
+}
+
+
+
+
+
+//============================================================================//
+//	FLEX WRAP
+//============================================================================//
+
+@mixin flex-wrap($typewrap) {
+
+            flex-wrap: $typewrap;
+    -webkit-flex-wrap: $typewrap;
+        -ms-flex-wrap: $typewrap;
+}
+
+
+
+
+
+//============================================================================//
+//	FLEX FLOW
+//============================================================================//
+
+@mixin flex-flow($row, $typewrap) {
+
+            flex-flow: $row $typewrap;
+    -webkit-flex-flow: $row $typewrap;
+        -ms-flex-flow: $row $typewrap;
+
+}
+
+
+
+
+
+//============================================================================//
+//	JUSTIFY CONTENT
+//============================================================================//
+
+@mixin justify-content($justify) {
+
+        justify-content: $justify;
+-webkit-justify-content: $justify;
+    -ms-justify-content: $justify;
+
+}
+
+
+
+
+
+//============================================================================//
+//	ALIGN ITEMS
+//============================================================================//
+
+@mixin align-items($align) {
+
+        align-items: $align;
+-webkit-align-items: $align;
+    -ms-align-items: $align;
+
+}
+
+
+
+
+
+//============================================================================//
+//	ALIGN CONTENT
+//============================================================================//
+
+@mixin align-content($align) {
+
+        align-content: $align;
+-webkit-align-content: $align;
+    -ms-align-content: $align;
+
+}
+
+
+
+
+
+//============================================================================//
+//	FLEX GROW
+//============================================================================//
+
+@mixin flex-grow($grow) {
+
+
+            flex-grow: $grow;
+    -webkit-flex-grow: $grow;
+        -ms-flex-grow: $grow;
+
+}
+
+
+
+
+
+//============================================================================//
+//	FLEX SHRINK
+//============================================================================//
+
+@mixin flex-shrink($shrink) {
+            flex-shrink: $shrink;
+    -webkit-flex-shrink: $shrink;
+        -ms-flex-shrink: $shrink;
+}
+
+
+
+
+
+//============================================================================//
+//	FLEX BASIS
+//============================================================================//
+
+@mixin flex-basis($basis) {
+            flex-basis: $basis;
+    -webkit-flex-basis: $basis;
+        -ms-flex-basis: $basis;
+}
+
+
+
+
+
+//============================================================================//
+//	FLEX GROW SHRINK AND BASIS
+//============================================================================//
+
+// 1st grow value - 2nd shrink value - 3rd basis value
+@mixin flex($flex...) {
+
+            flex: $flex;
+    -webkit-flex: $flex;
+        -ms-flex: $flex;
+}
+
+
+
+
+
+//============================================================================//
+//	FLEX ORDER
+//============================================================================//
+
+@mixin order($order) {
+
+            order: $order;
+    -webkit-order: $order;
+        -ms-order: $order;
+}
+
+
+
+
+
+//============================================================================//
+//	ALIGN SELF
+//============================================================================//
+
+@mixin align-self($align) {
+
+        align-self: $align;
+-webkit-align-self: $align;
+    -ms-align-self: $align;
+}

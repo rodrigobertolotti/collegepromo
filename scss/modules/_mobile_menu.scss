@@ -1,0 +1,143 @@
+@import "base/fonts_n_colors";
+
+
+div.mobile-menu-wrap {
+
+	transition: 0.8s;
+	position: fixed;
+	top: 0px;
+	right: -282px;
+	width: 280px;
+	height: 100%;
+	background: #231f20;
+	text-align: center;
+	padding: 40px;
+	z-index: 20;
+
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	&.active {
+		transition: 0.8s;
+		right: 0px;
+	}
+
+	img {
+		width: 100%;
+		display: block;
+		margin: 70px auto 20px !important;
+		max-width: 174px;
+		letter-spacing: 3.84px;
+	}
+
+
+	hr {
+		display: block;
+		border: none;
+		width: 100%;
+		margin: 30px 0px;
+		height: 1px;
+		background: white;
+	}
+
+}
+
+div.close-mobile-bt {
+
+	position: absolute;
+	top: -45px;
+	right: 15px;
+	font-size: 26px;
+
+	.img-close {
+		display: inline-block;
+		width: 18px;
+		height: auto;
+	}
+
+}
+
+ul.mobile-menu-nav {
+
+	margin: 50px 0px;
+	padding: 0px;
+	width: 100%;
+
+	li {
+
+		list-style-type: none;
+		text-align: left;
+		margin: 20px 0px;
+		display: block;
+
+		a, a:link, a:visited {
+			text-transform: uppercase;
+			font-family: $bold-font;
+			font-weight: 900;
+			font-size: 16px;
+			color: white;
+			letter-spacing: 3px;
+			padding-bottom: 10px;
+		}
+
+	}
+}
+
+ul.mobile-share-menu {
+
+	margin: 30px 0px;
+	padding: 0px;
+	width: 100%;
+	text-align: left;
+	@include display-flex;
+    @include flex-flow(row, nowrap);
+    @include justify-content(center);
+    @include align-items(center);
+
+	li {
+		list-style-type: none;
+		display: inline-block;
+		padding: 5px 5px;
+		font-family: $bold-font;
+		font-weight: 900;
+		font-size: 18px;
+		letter-spacing: 15px;
+
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+		div.horizontal-line {
+			min-width: 15px;
+			background: white;
+		}
+
+		&:first-child {
+			margin-left: 15px;
+		}
+
+		.facebook {
+			color: #ff2c92 !important;
+			i {
+				color: #ff2c92 !important;
+			}
+		}
+		.instagram {
+			color: #bc5fff !important;
+			i {
+				color: #bc5fff !important;
+			}
+		}
+		.tiktok {
+			color: #48ffff !important;
+			i {
+				color: #48ffff !important;
+			}
+		}
+		.whatsapp {
+			color: #00e676 !important;
+			i {
+				color: #00e676 !important;
+			}
+		}
+	}
+}

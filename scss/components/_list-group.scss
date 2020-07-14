@@ -1,0 +1,99 @@
+//============================================================================//
+//    GLOBAL LIST GROUP
+//============================================================================//
+
+.list-group {
+
+    .list-group-item {
+        position: relative;
+        display: block;
+        margin-bottom: -1px;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid $color-default;
+        background-color: $color-white;
+
+        &.disabled, &.disabled:focus, &.disabled:hover {
+            cursor: not-allowed;
+            color: rgba($color-inverse, 0.5);
+            background-color: rgba($color-default, 0.5);
+
+            .list-group-item-text {
+                color: rgba($color-inverse, 0.5);
+            }
+        }
+
+        &.active {
+            z-index: 2;
+            color: $color-white;
+            border-color: $color-inverse;
+            background-color: $color-inverse;
+
+            &:focus, &:hover {
+                color: $color-white;
+                background-color: darken($color-inverse, 10%);
+            }
+
+            .list-group-item-text {
+                color: rgba($color-white, 0.5);
+            }
+        }
+    }
+
+    a.list-group-item, button.list-group-item {
+
+        &:focus, &:hover {
+            text-decoration: none;
+            color: $color-inverse;
+            background-color: $color-primary;
+        }
+    }
+}
+
+//Remove border radius
+.card > .list-group:first-child .list-group-item:first-child,
+.card > .list-group:last-child .list-group-item:last-child,
+.list-group:first-child .list-group-item:first-child,
+.list-group:last-child .list-group-item:last-child,
+.card-header:first-child {
+    @include border-radius(0);
+}
+
+
+
+
+
+//============================================================================//
+//    LIST GROUP COLOR VARIANTS
+//============================================================================//
+
+.list-group-item-success {
+    @include list-group-variant($color-success);
+}
+a.list-group-item-success,
+button.list-group-item-success {
+    @include list-group-hover-variant($color-success);
+}
+
+.list-group-item-info {
+    @include list-group-variant($color-info);
+}
+a.list-group-item-info,
+button.list-group-item-info {
+    @include list-group-hover-variant($color-info);
+}
+
+.list-group-item-warning {
+    @include list-group-variant($color-warning);
+}
+a.list-group-item-warning,
+button.list-group-item-warning {
+    @include list-group-hover-variant($color-warning);
+}
+
+.list-group-item-danger {
+    @include list-group-variant($color-danger);
+}
+a.list-group-item-danger,
+button.list-group-item-danger {
+    @include list-group-hover-variant($color-danger);
+}

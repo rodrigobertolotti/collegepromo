@@ -1,0 +1,100 @@
+//============================================================================//
+//    MIXIN NAV TABS COLOR VARIANTS
+//============================================================================//
+
+@mixin nav-color-variant($color) {
+    border-bottom: 1px solid $color;
+
+    .nav-item {
+
+        .nav-link {
+
+            &.active, &:hover {
+                color: $color;
+                border-color: $color $color transparent ;
+            }
+        }
+    }
+}
+
+
+
+
+
+//============================================================================//
+//    MIXIN NAV TABS BACKGROUND VARIANTS
+//============================================================================//
+
+@mixin nav-bg-variant($color) {
+    border-bottom: 1px solid $color;
+
+    .nav-item {
+
+        .nav-link {
+
+            &.active, &:hover {
+                color: $color-white;
+                background: $color;
+                border-color: $color $color transparent ;
+            }
+        }
+    }
+}
+
+
+
+
+
+//============================================================================//
+//    MIXIN PILLS COLOR VARIANTS
+//============================================================================//
+
+@mixin pills-color-variant($color) {
+
+    .nav-item {
+
+        &:hover {
+            a.nav-link {
+                background: $color;
+            }
+        }
+
+        a.nav-link {
+            color: $color;
+
+            &.active, &:hover, &:active {
+                color: $color-white;
+                background: $color;
+            }
+
+            &.active {
+                &:hover {
+                    background: darken($color, 10%);
+                }
+            }
+
+            &:focus {
+                background: darken($color, 10%) ;
+            }
+        }
+
+        a.nav-link.disabled {
+            color: darken($color-grey, 10%);
+
+            &.active, &:hover, &:active {
+                color: darken($color-grey, 10%);
+                background: transparent;
+            }
+
+            &:focus {
+                background: transparent;
+            }
+        }
+
+        &.open {
+            a.nav-link {
+                background: darken($color, 10%) !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+//============================================================================//
+//    RESPONSIVE UTILITIES
+//============================================================================//
+
+.responsive-utilities {
+
+    .is-hidden {
+        color: #CCCCCC;
+        background: rgba($color-grey, 0.4);
+    }
+
+    .is-visible {
+        color: #468847;
+        background: #DFF0D8;
+    }
+}
+
+.responsive-utilities-test {
+
+    .not-visible {
+        color: #999999;
+        border: 1px solid #DDDDDD;
+    }
+
+    .visible {
+        color: #468847;
+        border: 1px solid #468847;
+        background: #DFF0D8;
+    }
+
+    .col-xs-6 {
+        margin-bottom: 5px;
+    }
+
+    span {
+        padding: 15px;
+        text-align: center;
+        font-weight: 700;
+    }
+}

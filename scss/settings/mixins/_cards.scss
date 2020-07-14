@@ -1,0 +1,134 @@
+//============================================================================//
+//    MIXIN CARDS COLOR VARIANTS
+//============================================================================//
+
+@mixin card-color-variant($color, $background, $border) {
+
+    h4.card-title {
+        color: rgba($color-inverse, 0.85);
+
+        i {
+            color: $color;
+        }
+    }
+
+    p {
+        small {
+            color: rgba($color-inverse, 0.75);
+        }
+    }
+
+    .card-header {
+        border-color: $border;
+
+        .wrap-title-actions,
+        .wrap-breadcrumb-actions {
+
+            h4.card-title {
+                color: rgba($color-inverse, 0.85);
+            }
+
+            .actions {
+
+                .open {
+
+                    a.btn-actions {
+                        i {
+                            color: darken($color, 30%);
+                        }
+                    }
+                }
+
+                a.btn-actions {
+
+                    &:hover {
+                        i {
+                            color: darken($color, 30%);
+                        }
+                    }
+
+                    &:after {
+                        background: rgba($background, 0.5);
+                    }
+
+                    i {
+                        color: $color;
+                    }
+                }
+            }
+        }
+
+        p {
+            small {
+                color: rgba($color-inverse, 0.75);
+            }
+        }
+    }
+}
+
+
+
+
+//============================================================================//
+//    MIXIN CARDS BACKGROUND COLOR VARIANTS
+//============================================================================//
+
+@mixin card-bg-variant($color, $background, $border) {
+
+    .card-header {
+        border-color: darken($border, 10%);
+        background: $background;
+
+        .wrap-title-actions,
+        .wrap-breadcrumb-actions {
+
+            h4.card-title {
+                color: $color-white;
+
+                i {
+                    color: rgba($color-white, 0.8);
+                }
+            }
+
+            .actions {
+
+                .open {
+                    a.btn-actions {
+                        i {
+                            color: darken($color, 30%);
+                        }
+                    }
+                }
+
+                a.btn-actions {
+                    &:hover {
+                        i {
+                            color: darken($color, 30%);
+                        }
+                    }
+                    &:after {
+                        background: rgba(0, 0, 0, 0.20);
+                    }
+
+                    i {
+                        color: darken($color, 30%);
+                    }
+                }
+            }
+        }
+
+        p {
+            small {
+                color: rgba($color-white, 0.85);
+            }
+        }
+    }
+
+    .card-footer {
+        background: $background;
+
+        h5, p, a {
+            color: $color-white;
+        }
+    }
+}

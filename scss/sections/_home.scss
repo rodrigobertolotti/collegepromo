@@ -1,0 +1,237 @@
+@import "../base/_fonts_n_colors";
+
+
+html {
+	overflow-x: hidden !important;
+}
+
+#home {
+	//margin-bottom: 40px;
+}
+
+
+/*#skip-intro {
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+
+}*/
+
+.home-content {
+	transition: 0.5s;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+
+	&.inactive {
+		transition: 1s;
+		opacity: 0;
+	}
+
+	.wrap-title {
+		margin-top: -200px;
+		@include display-flex;
+    	@include flex-flow(column, nowrap);
+    	@include justify-content(center);
+    	@include align-items(center);
+		width: 100%;
+		height: 100%;
+
+		.boton-college {
+			margin: 0 0 30px 0;
+			h1 {
+				font-family: $font-family-third;
+	            color: #ff2c92;
+	            font-weight: 700;
+	            font-size: 55px;
+	            text-align: center;
+	            margin: 0;
+	            padding: 0;
+	            width: auto;
+	            border: solid 2px white;
+	            padding: 10px 20px 10px 20px;
+	            text-shadow: 2px 2px 2px rgba($color-black, 0.4);
+	            transition: 0.5s;
+
+			}
+		
+            &:hover {
+            	background: white;
+            }
+		}
+
+		h2 {
+			font-family: $font-family-third;
+            color: white;
+            font-weight: 500;
+            font-size: 40px;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            width: auto;
+            text-shadow: 2px 2px 2px rgba($color-black, 0.4);
+		}
+	}
+}
+
+
+.home-video {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	padding: 0px;
+	overflow: hidden !important;
+
+	video {
+		position: absolute;
+		top: 50%; left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		transform: translate(-50%, -50%);
+	}
+}
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 1300px) {
+
+
+    
+	.home-content {
+		.wrap-title {
+			margin-top: -200px;
+			
+			.boton-college {
+				margin: 0 0 30px 0;
+				h1 {
+		            font-size: 40px;
+		            border: solid 2px white;
+		            padding: 10px 20px 10px 20px;
+		            text-shadow: 2px 2px 2px rgba($color-black, 0.4);
+				}
+			}
+
+			h2 {
+	            font-weight: 500;
+	            font-size: 25px;
+	            text-shadow: 2px 2px 2px rgba($color-black, 0.4);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 1199.99px) {
+
+
+    .scroll-to-explore {
+		display: none;
+    }
+}
+
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 960px) {
+
+
+    
+	.home-content {
+
+		.wrap-title {
+			margin-top: -200px;
+			
+			.boton-college {
+				margin: 0 0 30px 0;
+				h1 {
+		            font-size: 30px;
+		            border: solid 2px white;
+		            padding: 10px 20px 10px 20px;
+		            text-shadow: 2px 2px 2px rgba($color-black, 0.4);
+				}
+			}
+
+			h2 {
+	            font-weight: 500;
+	            font-size: 20px;
+	            text-shadow: 2px 2px 2px rgba($color-black, 0.4);
+			}
+		}
+	}
+}
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 501px) {
+
+
+	.home-video {
+		display: none !important;
+		video {
+			display: none !important;
+		}
+	}
+
+	.home-content {
+		background: url('../img/college-mobile.png') center center no-repeat;
+		background-size: cover;
+	}
+
+	.home-content {
+
+		.wrap-title {
+			margin-top: -200px;
+			
+			.boton-college {
+				margin: 0 0 30px 0;
+				h1 {
+		            font-size: 20px;
+		            border: solid 2px white;
+		            padding: 7px 16px 7px 16px;
+		            text-shadow: 1px 1px 1px rgba($color-black, 0.4);
+				}
+			}
+
+			h2 {
+	            font-weight: 500;
+	            font-size: 16px;
+	            text-shadow: 1px 1px 1px rgba($color-black, 0.4);
+			}
+		}
+	}
+		
+}
+
+
+
+
+ 

@@ -1,0 +1,255 @@
+@import "../base/_fonts_n_colors";
+
+
+
+
+//============================================================================//
+//    MUNDIAL DE HINCHADAS
+//============================================================================//
+
+#mundial-de-hinchadas {
+	@include display-flex;
+    @include flex-flow(column, nowrap);
+    @include justify-content(center);
+    @include align-items(center);
+	background: url('../img/participar-bg.png') center center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 250px;
+
+
+    .wrap-participar {
+		width: 100%;
+    	max-width: 1050px;
+    	margin-top: 50px;
+    	.container {
+    		.row {
+
+    			.wrap-formulario {
+    				width: 100%;
+    				margin: 0;
+                	padding: 0;
+
+
+
+					.mundial {
+						width: 100%;
+					    //padding: 20px 10% 30px 10%;
+					    background: #ff2c92;
+					    background: $color-primary;
+					    @include display-flex;
+	    				@include flex-flow(row, nowrap);
+	    				@include justify-content(center);
+	    				@include align-items(center);
+
+					    .form-box {
+					    	width: 80%;
+					    	@include display-flex;
+		    				@include flex-flow(column, nowrap);
+		    				@include justify-content(center);
+		    				@include align-items(center);
+
+
+		    				.wrap-logo-mundial {
+								width: 100%;
+								@include display-flex;
+		    					@include flex-flow(row, nowrap);
+		    					@include justify-content(center);
+		    					@include align-items(center);
+
+								img {
+									width: 100%;
+									max-width: 150px;
+									display: block;
+									margin: 30px 0 20px 0;
+								}
+							}
+
+				    		video {
+								width: 100%;
+								max-width: 700px;
+								height: auto;
+							}
+
+							h2.titulo-texto {
+					    		font-family: $font-family-third;
+					            color: $color-third;
+					            font-weight: 400;
+					            font-size: 40px;
+					            text-align: center;
+					            margin: 40px 0 20px 0;
+					            padding: 0;
+					            width: 100%;
+					        }
+
+					        p {
+					        	width: 100%;
+								max-width: 900px;
+								font-family: $font-family-fourth;
+								line-height: 25px;
+								font-size: 16px;
+				                font-weight: 500;
+				                text-align: center;
+				                color: rgba(white, 0.9);
+				                padding: 3px 15px 3px 15px;
+				                margin: 0;
+				                b{
+				                	color: $color-third;
+				                }
+					        }
+
+
+					    }
+
+					    
+
+				
+					    
+
+					    .wrap-btn {
+					    	@include display-flex;
+	    					@include flex-flow(row, nowrap);
+	    					@include justify-content(center);
+	    					@include align-items(center);
+					    	width: 100%;
+					    	margin-bottom: 30px;
+					        .btn {
+					        	margin-top: 40px;
+					        	margin-bottom: 20px;
+					            span {
+					                i {
+					                    color: $color-primary;
+					                    margin-right: 5px;
+					                }
+					            }
+					        }
+					    }
+					}
+                	
+    			}
+    		}
+    	}
+    }
+}
+
+
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 1370px) {
+
+
+	
+	#mundial-de-hinchadas {
+
+		&.college-modal-mostrar {
+			.college-modal {
+				@include display-flex;
+			}
+		}
+
+	    .wrap-participar {
+	    	width: 100%;
+	    	margin-top: 50px;
+	    	.container {
+	    		max-width: 800px;
+	    		margin: 0 auto;
+	    	}
+	    }
+	}
+}
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 1120px) {
+
+
+	
+	#mundial-de-hinchadas {
+
+	    .wrap-participar {
+	    	width: 100%;
+	    	margin-top: 50px;
+	    	.container {
+	    		max-width: 600px;
+	    		margin: 0 auto;
+	    	}
+	    }
+	}
+}
+
+
+
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 967px) {
+    
+	#mundial-de-hinchadas {
+	    .wrap-participar {
+	    	.container {
+	    		.row {
+	    			.wrap-formulario {
+						.mundial {
+						    .form-box {
+								h2.titulo-texto {
+						            font-weight: 400;
+						            font-size: 30px;
+						            margin: 40px 0 20px 0;
+						        }
+						    }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+//============================================================================//
+//    RESPONSIVE
+//============================================================================//
+
+@media (max-width: 915px) {
+
+
+	
+	#mundial-de-hinchadas {
+
+		
+	    .wrap-participar {
+	    	width: 100%;
+	    	margin-top: 50px;
+	    	.container {
+	    		max-width: 500px;
+	    		margin: 0 auto;
+	    	}
+	    }
+	}
+}
+
+

@@ -1,0 +1,168 @@
+//
+// TABLE OF CONTENTS
+//
+// GLOBAL NAV TABS
+//
+// NAV TABS COLOR VARIANTS
+//
+// NAV TABS BACKGROUND VARIANTS
+//
+// PILLS COLOR VARIANTS
+//
+
+
+
+
+
+//============================================================================//
+//    GLOBAL NAV TABS
+//============================================================================//
+
+.nav-tabs {
+    border-bottom: 2px solid $color-default;
+
+    .nav-item {
+
+        .nav-link {
+            color: darken($color-default, 5%);
+
+            &.active, &:hover {
+                color: darken($color-default, 25%);
+                border-color: $color-default $color-default transparent ;
+            }
+        }
+    }
+}
+
+.tab-content {
+    margin: 0 0 15px 0;
+    padding: 15px;
+}
+
+
+
+
+
+//============================================================================//
+//    NAV TABS COLOR VARIANTS
+//============================================================================//
+
+.nav-tabs-default {
+    @include nav-color-variant($color-default);
+}
+.nav-tabs-inverse {
+    @include nav-color-variant($color-inverse);
+}
+.nav-tabs-primary {
+    @include nav-color-variant($color-primary);
+}
+.nav-tabs-third {
+    @include nav-color-variant($color-third);
+}
+.nav-tabs-fourth {
+    @include nav-color-variant($color-fourth);
+}
+.nav-tabs-fifth {
+    @include nav-color-variant($color-fifth);
+}
+.nav-tabs-success {
+    @include nav-color-variant($color-success);
+}
+.nav-tabs-info {
+    @include nav-color-variant($color-info);
+}
+.nav-tabs-warning {
+    @include nav-color-variant($color-warning);
+}
+.nav-tabs-danger {
+    @include nav-color-variant($color-danger);
+}
+
+
+
+
+
+//============================================================================//
+//    NAV TABS BACKGROUND VARIANTS
+//============================================================================//
+
+.nav-tabs-default-bg {
+    @include nav-bg-variant($color-default);
+}
+.nav-tabs-inverse-bg {
+    @include nav-bg-variant($color-inverse);
+}
+.nav-tabs-primary-bg {
+    @include nav-bg-variant($color-primary);
+}
+.nav-tabs-third-bg {
+    @include nav-bg-variant($color-third);
+}
+.nav-tabs-fourth-bg {
+    @include nav-bg-variant($color-fourth);
+}
+.nav-tabs-fifth-bg {
+    @include nav-bg-variant($color-fifth);
+}
+.nav-tabs-success-bg {
+    @include nav-bg-variant($color-success);
+}
+.nav-tabs-info-bg {
+    @include nav-bg-variant($color-info);
+}
+.nav-tabs-warning-bg {
+    @include nav-bg-variant($color-warning);
+}
+.nav-tabs-danger-bg {
+    @include nav-bg-variant($color-danger);
+}
+
+.tab-content-default-bg   { background: $color-default; color: $color-white;}
+.tab-content-inverse-bg   { background: $color-inverse; color: $color-white;}
+.tab-content-primary-bg   { background: $color-primary; color: $color-white;}
+.tab-content-third-bg     { background: $color-third; color: $color-white;}
+.tab-content-fourth-bg    { background: $color-fourth; color: $color-white;}
+.tab-content-fifth-bg     { background: $color-fifth; color: $color-white;}
+.tab-content-success-bg   { background: $color-success; color: $color-white;}
+.tab-content-info-bg      { background: $color-info; color: $color-white;}
+.tab-content-warning-bg   { background: $color-warning; color: $color-white;}
+.tab-content-danger-bg    { background: $color-danger; color: $color-white;}
+
+
+
+
+
+//============================================================================//
+//    PILLS COLOR VARIANTS
+//============================================================================//
+
+.nav-pills-default {
+    @include pills-color-variant($color-default);
+}
+.nav-pills-inverse {
+    @include pills-color-variant($color-inverse);
+}
+.nav-pills-primary {
+    @include pills-color-variant($color-primary);
+}
+.nav-pills-third {
+    @include pills-color-variant($color-third);
+}
+.nav-pills-fourth {
+    @include pills-color-variant($color-fourth);
+}
+.nav-pills-fifth {
+    @include pills-color-variant($color-fifth);
+}
+.nav-pills-success {
+    @include pills-color-variant($color-success);
+}
+.nav-pills-info {
+    @include pills-color-variant($color-info);
+}
+.nav-pills-warning {
+    @include pills-color-variant($color-warning);
+}
+.nav-pills-danger {
+    @include pills-color-variant($color-danger);
+}
